@@ -1,0 +1,2139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Version 2.0</title>
+    <style>
+        @font-face {
+            font-family: Montserrat-Medium;
+            src: url(./fonts/Montserrat-Medium.otf);
+        }
+        @font-face {
+            font-family: Fontspring-DEMO-quichesans-bold;
+            src: url(./fonts/Fontspring-DEMO-quichesans-bold.otf);
+        }
+        @font-face {
+            font-family: Fontspring-DEMO-quichesans-bold;
+            src: url(./fonts/Fontspring-DEMO-quichesans-bold.otf);
+        }
+        @font-face {
+            font-family: Magicher;
+            src: url(./fonts/Magicher.otf);
+        }
+        @font-face {
+            font-family: Regionaire;
+            src: url(./fonts/Regionaire.otf);
+        }
+        @font-face {
+            font-family: Montserrat-Regular;
+            src: url(./fonts/Montserrat-Regular.otf);
+        }
+        @font-face {
+            font-family: AyugaDemoRegular-L30aW;
+            src: url(./fonts/AyugaDemoRegular-L30aW.ttf);
+        }
+
+        @font-face {
+            font-family: Montserrat-ExtraBold;
+            src: url(./fonts/Montserrat-ExtraBold.otf);
+        }
+        body{
+            margin: 0;
+        }
+        .container{
+            background-color: white;
+            font-family: Montserrat-Regular;
+            font-size: 11px;
+        } 
+        
+        .naviBar{
+            position: fixed;
+            z-index: 2;
+            background-color:  #063241;
+            width: 100%;
+            height: 60px;
+           
+            border-bottom: 1px solid #ffffff25;
+            box-shadow: 0 0 20px #0000001e;
+        }
+        .naviBarContent{
+            height: 60px;
+            display: flex;
+            align-items: center;
+            margin-left: 40px;
+            margin-right: 40px; 
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .naviBarLeftSide{
+            display: flex;
+            gap: 30px;
+        }
+        .bctlcNaviIcon{
+            background-color: #006b8e00;
+            border: 1px solid #ee9e59;
+            height: 33px;
+            width: 40px;
+            padding-bottom: 1.3px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center; 
+        }
+
+        .naviBarLogoPanl{
+            background-color: #006b8e;
+            height: 33px;
+            width: 40px;
+            padding-bottom: 1.3px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center; 
+        }
+        .naviBarLogoPanl:hover{
+            background-color: #ee9e59;
+            transition: 0.6s;
+        }
+        
+        .userIcon{
+            background-color: #006b8e14;
+            height: 33px;
+            width: 35px;
+            padding: 1.3px;
+            border-radius: 3px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .userIcon:hover{
+            /* background-color: #ee9e59;
+            transition: 0.6s; */
+            border-bottom: 2px solid #faa111;
+
+        transition: 0.4s ease-in-out;
+        color:  #003e55;
+        transform: scale(1.1);
+        }
+
+        
+        .naviBarSearch{
+            background-color: #006b8e00;
+            height: 35px;
+            width: 36px;
+            border-radius: 50%;
+            border-top: 1.6px solid #faa111;
+            border-bottom: 1.6px solid #faa111;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .naviBarLoginText:hover{
+            color: #faa111;
+        }
+        .naviBarSearch:hover{
+            background-color: #ee9e59;
+            transition: 0.6s;
+        }
+        .naviBarSearchIcon{
+            height: 33px;
+            width: 35px;
+            padding-bottom: 1.3px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .naviBarSearch:hover {
+            background-color: #ee9e59;
+        }
+       
+        
+        .naviBarRightSide{
+            background-color: #7c4c4a00;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            color: #ffffff;
+        }
+        nav ul {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+          display: flex;
+          justify-content: space-between;
+        }
+        
+        nav li {
+          position: relative;
+        }
+
+        /* Drop-down Menu Styles */
+        nav ul ul {
+          width: 170px;
+          min-height: fit-content;
+          display: none;
+          position: absolute;
+          top: 42px;
+          right: 0px; /* Changed from left: 0 to right: 0 */
+          background-color: #042b38;
+          padding: 10px;
+          border: 1px solid #cccccc6f;
+          border-radius: 5px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+
+
+       /*  nav ul li:hover > ul {
+          display: block;
+        } */
+        .hiddenSubBtn{
+            background-color: #042b38;
+            border-radius: 3px;
+        }
+        .hiddenSubBtn:hover{
+            background-color: #0a5c78;
+        }
+
+        .linkStyle{
+            text-decoration: none;
+          color: #ffffff;
+          padding: 10px;
+          display: block;
+          display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .header{
+            background-image: url(./imgs/bg.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-color: #074155;
+            min-height: fit-content;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 70px;
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+
+        .channelBtn{
+            padding: 7px;
+            color: #ffffff;
+            border-radius: 5px;
+            width: 150px;
+            height: 35px;
+        }
+                .liquid-button {
+          position: relative;
+          background-color: #021b23;
+          color: #fff;
+          border: none;
+          padding: 12px 25px;
+          cursor: pointer;
+          overflow: hidden;
+          border-radius: 5px;
+          border: 1px solid #ffffff;
+          box-shadow: 0 0 5px 2px #0000001e;
+        }
+        
+        .liquid {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: #ecaa54;
+          transform: translateX(-100%);
+          transition: transform 0.5s ease-out;
+        }
+        
+        .liquid-button:hover .liquid {
+          transform: translateX(100%);
+        }
+        
+        .liquid-button:hover {
+          background-color: #ecaa54;
+          color: #333;
+          border: 1px solid #ffffff00;
+        }
+        
+
+        .intro{
+            background-color: hsla(2, 24%, 41%, 0);
+            text-align: center;
+            width: 85%;
+            padding-left: 150px;
+            min-height: fit-content;
+            
+        }
+       @media screen and (max-width: 767px){
+        .intro{
+            text-align: center;
+            width: 50%;
+            padding-left: 35px;
+            min-height: fit-content;
+            
+        }
+       }
+        
+        
+        .title{
+            font-size: 140px;
+            font-family: Magicher;
+            color: #ffffff;
+        }
+        @media screen and (max-width: 767px){
+            .title{
+            font-size: 45px;
+        }
+       }
+
+        .preTitle{
+            font-size: 25px;
+            font-family: Magicher;
+            color: #ffffff;
+        }
+        @media screen and (max-width: 767px){
+            .preTitle{
+            font-size: 15px;
+
+        }}
+       
+        .subTitle{
+            font-size: 30px;
+            font-family: Magicher;
+            color: #ffffff;
+        }
+        @media screen and (max-width: 767px){
+            .subTitle{
+            font-size: 19px;
+            padding-left: 20px;
+        }}
+
+        .shotBrief{
+            font-size: 13px;
+            font-family: Montserrat-Regular;
+            color: #ffffff;
+        }
+        @media screen and (max-width: 767px){
+            .shotBrief{
+            font-size: 9.5px;
+            padding-left: 20px;
+        }}
+
+
+        .thumbnail{
+            border-top-left-radius: 7px;
+            border-bottom-left-radius: 7px;
+            background-color: #074155;
+            padding: 20px;
+            width: 30px;
+            min-height: fit-content;
+            box-shadow: 0 0 5px 2px #0000001d;
+        }
+
+        .categorySearch{
+            background-color: #ee9e59;
+            min-height: fit-content;
+            padding-left: 45px;
+            padding-right: 45px;
+            padding-top: 30px;
+            padding-bottom: 30px;
+            color: white;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+        }
+        .imgProperties{
+            background-color: #063241;
+            outline: 10px #281040;
+            width: 250px;
+            border-radius: 3px;
+            display: flex; 
+            align-items: center; 
+            justify-content: center;
+            padding-top: 2;
+            padding-bottom: 2;
+            padding: 7px;
+            gap: 10px;
+            outline: 1.4px solid #ffffff66;
+        }
+        .imgProperties:hover{
+            background-color: #03181f;
+            outline: 1.5px solid #ffffffbd;
+        }
+        .contentView{
+            background-color: #063241;
+            padding-left: 30px;
+            padding-top: 50px;
+            padding-bottom: 30px;
+            padding-right: 30px;
+            border-bottom: 1px solid #ffffff25;
+        }
+
+
+        .homeSection{
+            min-height: fit-content;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: space-evenly;
+        }
+       
+        /*hidden preview panel starts here*/
+                #preview {
+        	position: fixed;
+        	top: 14%;
+        	left: 9%;
+        	width: 80%;
+        	min-height: fit-content;
+        	background-color: #fff;
+        }
+
+        .hidden {
+        	display: none;
+            min-width: fit-content;
+        	min-height: fit-content;
+            align-items: center;
+           position: relative;
+        }
+        .previewVid{
+            position: absolute;
+            top: 50%;
+            bottom: 25%;
+            left: 25%;
+            width: 950px;
+            height: 520px;
+            display: grid;
+            align-items: center;
+            justify-content: center;
+            background-color: #084053;
+            border-radius: 3px;
+            padding: 10px;
+            box-shadow:  10px 0 20px #0000006d;
+        }
+
+        .previewMenu{
+            position: absolute;
+            top: 50%;
+        bottom: 50%;
+            width: 300px;
+        	height: 540px;
+            display: grid;
+            vertical-align: middle;
+            background-color: #063241;
+            border-radius: 7px;
+            gap: 10px;
+            box-shadow:  10px 0 20px #0000006d
+        }
+        .console{
+            width: 850px;
+        	height: 47px;
+            background-color: #063241;
+            border-radius: 7px;
+        }
+        .previewMenuLogo{
+            width: 100%;
+        	height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            color: #ffffff;
+            background-color:  #084053;
+            border-radius: 7px;
+            font-size: 17px;
+            box-shadow:  0 0 20px #00000000;
+        }
+
+        .previewMenuInfo{
+            width: 100%;
+        	height: 470px;
+            display: grid;
+            justify-content: center;
+            background-color: #084053;
+            border-radius: 7px;
+            box-shadow:  0 0 20px #00000012;
+        }
+        
+
+        
+        .closeBtn{
+            border: 1px solid #ffffff00; 
+            border-radius: 3px; 
+            background-color: #f67472;
+           width: 145px;
+            height: 40px; 
+            color: #ffffff;
+        }
+        .playBtn{
+            border: 1px solid #ffffff; 
+            border-radius: 3px; 
+            background-color: rgba(240, 248, 255, 0); 
+            width: 290px; 
+            height: 40px; 
+            color: #ffffff;
+        }
+        .playBtn:hover{
+            background-color: #faa111;
+            border: 1px solid #ffffff00; 
+        }
+        /*hidden preview panel ends here*/
+        .previewBg{
+            background-color: #ffffff;
+            width: 100%;
+            height: 100%;
+        }
+        .cardUpper{
+            width: 320px;
+            height: 160px;
+            background-color: #703b3800;
+            border-top-left-radius: 7px;    
+            border-top-right-radius: 7px;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+        }
+        .cardUpperContent{
+            /*background-image: url(./imgs/Do\ Well\ Part\ 4\ -\ Mimicking\ Divinity\ -\ Word\ Archived\ Series\ -\ Youtube\ Template\ v2.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            */
+            width: 310px;
+            height: 150px;
+            background-color: #063241;
+            border-top-left-radius: 7px;    
+            border-top-right-radius: 7px;
+        }
+
+        .cardUpperContentThumbnail{
+            border-top-left-radius: 7px;    
+            border-top-right-radius: 7px;
+        }
+
+        .cardLower{
+            width: 300px;
+            height: 72px;
+            background-color: #ffffff00;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+        .card{
+            background-color: #f7f3da;
+            height: 250px;
+            width: 320px;
+            border-radius: 5px;
+            align-items: center;
+            justify-content: center;
+            display: grid;
+        }
+        .card:hover{
+            transform: scale(1.05);
+            transition: 0.7s;
+        }
+
+        .profileCardIcon{
+           width: 47px; height: 47px; 
+            background-color: #063241; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            border-radius: 50%;
+        }
+        .briefCard{
+            width: 198px; height: 60px; 
+            background-color: #3d0b0a00;  
+            padding-left: 5px; display: flex; 
+            align-items: center; 
+            justify-content: center;
+        }
+        .hiddenCardMenu{
+            width: 47px; height: 47px; 
+            background-color:  #063241; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center;
+            border-radius: 50%;
+        }
+
+        .hiddenCardMenu:hover {
+            width: 47px; height: 47px; 
+            background-color:  #ee9e59; 
+            transition: 1s;
+        }
+        #newSectionId{
+            display: none;
+        }
+         
+        .exploreSection{
+           background-color: #333;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           gap: 30px;
+        }
+        #exploreSectionId{
+            display: none;
+            text-align: center;
+            font-family: Montserrat-Regular;
+        }
+
+            #Series{
+            display: none;
+        }
+            #shortsSectionId{
+            display: none;
+        }
+
+        .reelsCard{
+             display: flex;
+             flex-wrap: wrap;
+             justify-content: center;
+             gap: 4.5px;
+        } 
+
+        .reels{
+            background-color: #ffffff00;
+            min-height: fit-content;
+        }
+        .reelPanel{
+            margin: 10px;
+            background-color: #ffffff;
+            width: 210px;
+            height: 340px;
+            border-radius: 5px;
+            padding: 3px;
+            padding-top: 6px;
+            box-shadow: 0 0 10px #00000075;
+        }
+        
+        .reelPanel:hover{
+            transform: scale(1.02);
+            transition-duration: 0.2s;
+        }
+        .reelPreview{
+            background-color: #021b23;
+            width: 220px;
+            height: 290px;
+            border-radius: 3px;
+            box-shadow: 0 0 10px #0000005e;
+            display: flex;
+            align-items: center;
+            justify-content:center ;
+        }
+        .upperReelCard{ 
+            display: flex;
+            justify-content: center;
+
+        }
+        .lowerReelCard{
+            display: flex;
+            justify-content: space-between;
+            padding-top: 7px;
+            padding-left: 3px;
+            padding-right: 3px;
+        }
+        .playtReelBtn{
+            background-color: #021b23;
+            width: 120px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #ffffff;
+            border-radius: 3px;
+            box-shadow: 0 0 10px #0000004f;
+        }
+        .playtReelBtn:hover{
+            background-color: #043342;
+            transition-duration: 0.5s;
+        }
+
+         .saveReelBtn{
+            background-color: #021b23;
+            width:40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #ffffff;
+        }
+        .saveReelBtn:hover{
+            background-color: #ecaa54;
+            transition-duration: 0.5s;
+        }
+
+        .shareReelBtn{
+            background-color: #021b23;
+            width:40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #ffffff;
+        }
+        .shareReelBtn:hover{
+            background-color: #ecaa54;
+            transition-duration: 0.5s;
+        }
+
+        .showMoreBtn{
+            border: none;
+            background-color: #021b23;
+            width: 120px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #ffffff;
+            border-radius: 3px;
+            box-shadow: 0 0 10px #0000004f;
+        }
+        .showMoreBtn:hover{
+            background-color: #ecaa54;
+            transition-duration: 0.5s;
+        }
+
+
+        .showLessBtn{
+            border: none;
+            background-color: #021b23;
+            width: 120px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #ffffff;
+            border-radius: 3px;
+            box-shadow: 0 0 10px #0000004f;
+        }
+        .showLessBtn:hover{
+            background-color: #ecaa54;
+            transition-duration: 0.5s;
+        }
+
+        .BtnClass{
+            padding-top: 40px;
+            display: flex;
+            justify-content: center;
+            clear: left;       
+        }
+        #reelsCard2{
+            display: none;
+        }
+
+
+
+            #savedSectionId{
+            display: none;
+            text-align: center;
+            font-family: Montserrat-Regular;
+        }
+
+        .footer{
+            /* background-color: #021b23; */
+            background-image: url(./imgs/bg.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            min-height: fit-content;
+            padding-left: 50px;
+            padding-right: 50px;
+            padding-bottom: 70px;
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            padding-top: 70px;
+            color: #ffffff;
+            font-family: Montserrat-Regular;
+            font-size: 11px;
+            flex-wrap: wrap;
+        }
+        .endFooter{
+            background-color: #063241;
+            height: 50px;
+            padding-left: 50px;
+            padding-right: 50px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+            font-family: Montserrat-Regular;
+            font-size: 11px;
+            border-top: 1px solid #ffffff25;
+        }
+        .getStarted{
+            height: 100px;
+        }
+        .getStarted:hover{
+            transition: 0.05s ease-in-out;
+            color: #ffffff;
+        }
+        .endFooterLeft{
+            display: flex;
+            gap: 30px;
+        }
+
+        #DropdownMenu{
+            position: relative;
+            display: inline-block;
+        }
+        .DropdownMenuContent{
+            display: none;
+            position: absolute;
+            background-color: #1f2833;
+            min-width: 160px;
+            min-height:fit-content;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0,2);
+            padding-right: 150px;
+            z-index: 1;
+            font-size: 9px;
+            gap: 20px; 
+            font-size: 11px; 
+            color: #898888;
+            border-radius: 2px;
+            background-color: #281040;
+            width: 130px;
+            right: 0;
+        }
+
+        .DropdownMenuContentPositioning{
+            display: none;
+            padding-right: 150px;
+            
+            position: absolute;
+            padding: 12px 16px;
+            z-index: 2;
+            font-size: 9px;
+            gap: 20px; 
+            font-size: 11px; 
+            color: #898888;
+            border-radius: 2px;
+            box-shadow: 0px 8px 16px 0px #00000024;
+        }
+        #DropdownMenu:hover .DropdownMenuContentPositioning{
+           display: block;
+           background-color:  #7c4c4a;
+        }
+        .footerSocialLinks{
+            background-color: #063241;
+            text-decoration: none; 
+            color: #ffffff; 
+            display: flex; 
+            align-items: center; 
+            width: 300px;
+            height: 30px;
+            border-top-left-radius: 16px;
+            border-bottom-left-radius: 16px;
+            padding-left: 5px;
+            padding-top: 2px;
+            padding-bottom: 2px;
+            gap: 7px;
+        }
+
+        .footerContactLinks{
+            background-color: #7c4c4a00;
+            border: 0.5px solid  #ffffff00;
+            text-decoration: none; 
+            color: #ffffff; 
+            display: flex; 
+            align-items: center; 
+            width: 300px;
+            height: 30px;
+            padding-left: 5px;
+            padding-top: 2px;
+            padding-bottom: 2px;
+            gap: 7px;
+        }
+        .footerContactLinks:hover{
+            background-color: #051f28;
+            border: 0.5px solid  #006b8e;
+            border-radius: 3px;
+        }
+
+        .footerMediaHandlesLinks{
+            background-color: #7c4c4a;
+            text-decoration: none; 
+            color: #ffffff; 
+            display: flex; 
+            align-items: center; 
+            width: 300px;
+            height: 30px;
+            border-top-left-radius: 16px;
+            border-bottom-left-radius: 16px;
+            padding-left: 5px;
+            padding-top: 2px;
+            padding-bottom: 2px;
+            gap: 7px;
+        }
+        .footerSocialLinks:hover{
+            transform: scale(1.02);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="naviBar">
+           <div class="naviBarContent">
+                <span class="naviBarLeftSide">
+                <span class="DropdownMenuContent"></span>
+                <span class="naviBarRightSide">
+                    <span class="bctlcNaviIcon">
+                     <!--    <img src="./Logos/Bible Culture White Logo.png" width="25" alt="" style="filter: brightness(0) invert(1);"></span>
+                    BCTLC -->
+                    <img src="./Logos/mix v2.png" width="25" alt=""></span>
+                    <span style="font-size: 9;">BibleCulture <br>
+                        <span style="color: #faa111; font-size: 9px;">Learn &  Be Inspired</span>
+                    </span>
+                    </span>
+                    
+                
+              
+            </span>
+            <span class="naviBarRightSide">
+                <!--
+                <span class="naviBarRightSide">
+                    <span class="userIcon"><img src="./Icons/notifications_outline_icon_124897.png" width="20" alt="" style="filter: brightness(0) invert(1);"></span>
+                    Inbox
+                </span>-->
+                <div class="naviBarRightSide">
+                    <span class="userIcon"><img src="./Icons/search_icon_125165.png" width="23" alt="" style="filter: brightness(0) invert(1);"></span>
+                    <span class="userIcon"><img src="./Icons/notifications_outline_icon_124897.png" width="22" alt="" style="filter: brightness(0) invert(1);"></span>
+                <nav class="dropMenuPanel" id="mainMenu">
+                    <ul>
+                      <li>
+                        <span class="naviBarRightSide">
+                    <span class="userIcon" ><img src="./Icons/icons8-menu-100 (4).png" width="27" alt="" style="filter: brightness(0) invert(1);"></span>
+                     
+                </span>
+                        <!-- Drop-down Menu -->
+                        <ul id="dropSubMenu">
+                            <li class="hiddenSubBtn"><a class="linkStyle" href="#">
+                                <img src="/Icons/icons8-user-100.png" width="27" alt="" style="filter: brightness(0) invert(1);">
+                                <span>
+                                    Profile <br>
+                                    <span style="color: #faa111;">Browersing as guest </span>
+                                    
+                                </span>
+                            </a></li>
+                            <hr style="filter: opacity(20%);">
+                            <li class="hiddenSubBtn"><a class="linkStyle" href="#">
+                                <img src="./Icons/notifications_outline_icon_124897.png"  width="20" alt="" style="filter: brightness(0) invert(1);">
+                                Updates & news
+                            </a></li>
+                            <hr style="filter: opacity(20%);">
+                            <li class="hiddenSubBtn"><a class="linkStyle" href="#">
+                                <img src="./Icons/tag_social_media_website_user_user_tagged_icon_197447.png"  width="30" alt="" style="filter: brightness(0) invert(1);">
+                                About us
+                            </a></li>
+                            <li class="hiddenSubBtn"><a class="linkStyle" href="#">
+                                <img src="./Icons/achievement.png"  width="25" alt="" style="filter: brightness(0) invert(1);">
+                                Our mission
+                            </a></li>
+                            <li class="hiddenSubBtn"><a class="linkStyle" href="#">
+                                <img src="./Icons/icons8-community-96.png"  width="30" alt="" style="filter: brightness(0) invert(1);">
+                                Join us
+                            </a></li>
+                            <hr style="filter: opacity(20%);">
+                            <li class="hiddenSubBtn"><a class="linkStyle" href="./Supporting pages/Login Page.html">
+                                <img src="./Icons/avatar_male_man_people_person_profile_user_icon_123199.png"  width="25" alt="" style="filter: brightness(0) invert(1);">
+                                Login
+                            </a></li>
+                            <!-- <li><a class="linkStyle" href="#">Logout</a></li> -->
+                        </ul>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+            
+                   <!--  <span class="naviBarLoginText">Login</span>  -->
+                    </div> 
+           </div>
+                   
+                </span>
+            </div>                 
+        </div>
+
+        
+        <div class="header"  id="headerId"> 
+            <div class="intro">
+                <br>
+                <br>
+                <br>                
+                <br>                
+                <br>                
+
+                <span class="title">BibleCulture</span>
+                <span class="preTitle"><!--The Transcripting Logos Channel(Transcripting . Logia . Coummunity)--></span>
+
+                <br>
+                <span class="subTitle">Learn & Be Inspired</span><span style="color: #faa111; font-size: 20px;">.</span>
+                <br>
+                <br>
+                <span class="shotBrief">
+                    Unlock the secrets of Scripture, follow the footsteps of Jesus, and live a life ordained by God. <br> 
+                    Welcome to BibleCulture TLC, where we explore the hidden treasures of the Bible, unpack Jesus' teachings, <br> 
+                    and apply timeless truths to our everyday lives, empowering you to live a life that honors God <br>
+                    and discover the power of a godly ordained life.
+                </span>
+                <br>
+                <br>
+                <br>
+                <br>
+                <a href="https://youtube.com/playlist?list=PLswh4Rt-GXgJsRDir76ddw47m_GHbJrgn&si=bEl9TTcClOrjmirS" style="text-decoration: none; color: white;"> 
+                    <button class="liquid-button" class="channelBtn">
+                        <span style="color: white; font-size: 13px;">Youtube Channel</span>
+                        <span class="liquid"></span>
+                      </button>
+                </a>
+                <br>
+                <br>
+                <br>                
+                <br>
+            </div>
+            <div class="thumbnail" style="display: grid; gap: 30px;">
+                <a href="https://www.facebook.com/share/1E54TZ5cx3oE9F58/?mibextid=qi2Omg"><img src="./Icons/Facebook white.png" width="30" alt=""></a>
+                <a href=""><img src="./Icons/email white.png" width="30" alt=""></a>
+                <a href="https://www.instagram.com/fred_mjr37?igsh=OGQ5ZDc2ODk2ZA=="><img src="./Icons/instragram white.png" width="30" alt=""></a>
+                <a href=""><img src="./Icons/Whatsapp white.png" width="30" alt=""></a>
+                <a href="https://youtube.com/playlist?list=PLswh4Rt-GXgJsRDir76ddw47m_GHbJrgn&si=bEl9TTcClOrjmirS"><img src="./Icons/Youtube White Icon.png" width="30" alt=""></a>
+            </div>
+            
+        </div>
+        <div class="categorySearch" id="categorySearchId">
+            
+            <span class="imgProperties" id="RecentAddedBtn">
+                <img src="./Icons/icons8-new-96.png" width="30" alt="" style="filter: brightness(0) invert(1);">
+                Recently Added
+            </span>
+            <span class="imgProperties" id="exploreBtn">
+                <img src="./Icons/social_media_brand_logo_application_web_browser_internet_explore_icon_197313.png" width="30" alt="" style="filter: brightness(0) invert(1);">
+                Explore
+            </span>
+            <span class="imgProperties" id="SeriesBtn">
+                <img class="whiteEffect" src="./Icons/streaming_video_chatting_facebook_watch_social_media_application_icon_197387.png" width="30" alt="" style="filter: brightness(0) invert(1);">
+                Series
+            </span>
+            <span class="imgProperties" id="shortsBtn">
+                <img src="./Icons/chatting_social_media_menu_brand_video_instagram_reel_icon_197364.png" width="28" alt="" style="filter: brightness(0) invert(1);">
+                Shorts
+            </span>
+            <span class="imgProperties" id="savedBtn">
+            <img src="./Icons/icons8-favorites-500.png" width="25" alt="" style="filter: brightness(0) invert(1);">
+            Saved & Favourates
+        </span>
+        </span>
+        </div>
+        </div>
+        <div class="contentView" id="contentView">
+            <!--Home Section here-->
+            <div class="homeSection" id="homeSectionId">
+                <div class="card">
+                    <div class="cardUpper">
+                        <div class="cardUpperContent">
+                            <div class="cardUpperContentThumbnail">
+                                <img src="./imgs/Do Well Part 4 - Power over Death & Life - Word Archived Series - Youtube Template.png" width="310" height="auto" alt="">
+                            </div>
+                           
+                        </div>
+                    </div>
+                    <br>
+                    <div class="cardLower" style="display: flex; align-items: center; padding-left: 10px; padding-right: 10px; font-size: 10px;">
+                        <span class="profileCardIcon">
+                            <img src="./Logos/Bible Culture White Logo.png" width="25px" alt="" style="filter: brightness(0) invert(1);">
+                        </span>
+                        <span class="briefCard">
+                            <span>
+                                <span style="font-weight: bolder;">Do Well Part 4: Mimicking Divinity</span>
+                                 <br>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Qui perferendis quos!</span>
+                        </span>
+                        <span class="hiddenCardMenu" id="div-button">
+                            <img src="./Icons/icons8-play-100.png" width="22px" alt="" style="filter: brightness(0) invert(1);">
+                        </span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="cardUpper">
+                        <div class="cardUpperContent">
+                            <div class="cardUpperContentThumbnail">
+                                <img src="./imgs/Do Well Part 5 - Reality's Perfect Picture - Word Archived Series - Youtube Template.png" width="310" height="auto" alt="">
+                            </div>
+                           
+                        </div>
+                    </div>
+                    <br>
+                    <div class="cardLower" style="display: flex; align-items: center; padding-left: 10px; padding-right: 10px; font-size: 10px;">
+                        <span class="profileCardIcon">
+                            <img src="./Logos/Bible Culture White Logo.png" width="25px" alt="" style="filter: brightness(0) invert(1);">
+                        </span>
+                        <span class="briefCard">
+                            <span>
+                                <span style="font-weight: bolder;">Do Well Part 4: Mimicking Divinity</span>
+                                 <br>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Qui perferendis quos!</span>
+                        </span>
+                        <span class="hiddenCardMenu" id="div-button">
+                            <img src="./Icons/icons8-play-100.png" width="22px" alt="" style="filter: brightness(0) invert(1);">
+                        </span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="cardUpper">
+                        <div class="cardUpperContent">
+                            <div class="cardUpperContentThumbnail">
+                                <img src="./imgs/Do Well Part 4 - Mimicking Divinity - Word Archived Series - Youtube Template v2.png" width="310" height="auto" alt="">
+                            </div>
+                           
+                        </div>
+                    </div>
+                    <br>
+                    <div class="cardLower" style="display: flex; align-items: center; padding-left: 10px; padding-right: 10px; font-size: 10px;">
+                        <span class="profileCardIcon">
+                            <img src="./Logos/Bible Culture White Logo.png" width="25px" alt="" style="filter: brightness(0) invert(1);">
+                        </span>
+                        <span class="briefCard">
+                            <span>
+                                <span style="font-weight: bolder;">Do Well Part 4: Mimicking Divinity</span>
+                                 <br>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Qui perferendis quos!</span>
+                        </span>
+                        <span class="hiddenCardMenu" id="div-button">
+                            <img src="./Icons/icons8-play-100.png" width="22px" alt="" style="filter: brightness(0) invert(1);">
+                        </span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="cardUpper">
+                        <div class="cardUpperContent">
+                            <div class="cardUpperContentThumbnail">
+                                <img src="./imgs/Do Well Part 3 - Endurance - Word Archived Series - Youtube Template (2).png" width="310" height="auto" alt="">
+                            </div>
+                           
+                        </div>
+                    </div>
+                    <br>
+                    <div class="cardLower" style="display: flex; align-items: center; padding-left: 10px; padding-right: 10px; font-size: 10px;">
+                        <span class="profileCardIcon">
+                            <img src="./Logos/Bible Culture White Logo.png" width="25px" alt="" style="filter: brightness(0) invert(1);">
+                        </span>
+                        <span class="briefCard">
+                            <span>
+                                <span style="font-weight: bolder;">Do Well Part 4: Mimicking Divinity</span>
+                                 <br>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Qui perferendis quos!</span>
+                        </span>
+                        <span class="hiddenCardMenu" id="div-button">
+                            <img src="./Icons/icons8-play-100.png" width="22px" alt="" style="filter: brightness(0) invert(1);">
+                        </span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="cardUpper">
+                        <div class="cardUpperContent">
+                            <div class="cardUpperContentThumbnail">
+                                <img src="./imgs/Do Well Part 2 - Tell Them- Word Archived Series - Youtube Template v2.png" width="310" height="auto" alt="">
+                            </div>
+                           
+                        </div>
+                    </div>
+                    <br>
+                    <div class="cardLower" style="display: flex; align-items: center; padding-left: 10px; padding-right: 10px; font-size: 10px;">
+                        <span class="profileCardIcon">
+                            <img src="./Logos/Bible Culture White Logo.png" width="25px" alt="" style="filter: brightness(0) invert(1);">
+                        </span>
+                        <span class="briefCard">
+                            <span>
+                                <span style="font-weight: bolder;">Do Well Part 4: Mimicking Divinity</span>
+                                 <br>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Qui perferendis quos!</span>
+                        </span>
+                        <span class="hiddenCardMenu" id="div-button">
+                            <img src="./Icons/icons8-play-100.png" width="22px" alt="" style="filter: brightness(0) invert(1);">
+                        </span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="cardUpper">
+                        <div class="cardUpperContent">
+                            <div class="cardUpperContentThumbnail">
+                                <img src="./imgs/Do Well Part 1 - Age of Discovery- Word Archived Series - Youtube Template.png" width="310" height="auto" alt="">
+                            </div>
+                           
+                        </div>
+                    </div>
+                    <br>
+                    <div class="cardLower" style="display: flex; align-items: center; padding-left: 10px; padding-right: 10px; font-size: 10px;">
+                        <span class="profileCardIcon">
+                            <img src="./Logos/Bible Culture White Logo.png" width="25px" alt="" style="filter: brightness(0) invert(1);">
+                        </span>
+                        <span class="briefCard">
+                            <span>
+                                <span style="font-weight: bolder;">Do Well Part 4: Mimicking Divinity</span>
+                                 <br>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Qui perferendis quos!</span>
+                        </span>
+                        <span class="hiddenCardMenu" id="div-button">
+                            <img src="./Icons/icons8-play-100.png" width="22px" alt="" style="filter: brightness(0) invert(1);">
+                        </span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="cardUpper">
+                        <div class="cardUpperContent">
+                            <div class="cardUpperContentThumbnail">
+                                <img src="./imgs/War on The Ascension P6 - Word Archived Series - Youtube Template v2.png" width="310" height="auto" alt="">
+                            </div>
+                           
+                        </div>
+                    </div>
+                    <br>
+                    <div class="cardLower" style="display: flex; align-items: center; padding-left: 10px; padding-right: 10px; font-size: 10px;">
+                        <span class="profileCardIcon">
+                            <img src="./Logos/Bible Culture White Logo.png" width="25px" alt="" style="filter: brightness(0) invert(1);">
+                        </span>
+                        <span class="briefCard">
+                            <span>
+                                <span style="font-weight: bolder;">Do Well Part 4: Mimicking Divinity</span>
+                                 <br>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Qui perferendis quos!</span>
+                        </span>
+                        <span class="hiddenCardMenu" id="div-button">
+                            <img src="./Icons/icons8-play-100.png" width="22px" alt="" style="filter: brightness(0) invert(1);">
+                        </span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="cardUpper">
+                        <div class="cardUpperContent">
+                            <div class="cardUpperContentThumbnail">
+                                <img src="./imgs/War on The Ascension P5 - 2 of 2 - Word Archived Series - Youtube Template.png" width="310" height="auto" alt="">
+                            </div>
+                           
+                        </div>
+                    </div>
+                    <br>
+                    <div class="cardLower" style="display: flex; align-items: center; padding-left: 10px; padding-right: 10px; font-size: 10px;">
+                        <span class="profileCardIcon">
+                            <img src="./Logos/Bible Culture White Logo.png" width="25px" alt="" style="filter: brightness(0) invert(1);">
+                        </span>
+                        <span class="briefCard">
+                            <span>
+                                <span style="font-weight: bolder;">Do Well Part 4: Mimicking Divinity</span>
+                                 <br>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Qui perferendis quos!</span>
+                        </span>
+                        <span class="hiddenCardMenu" id="div-button">
+                            <img src="./Icons/icons8-play-100.png" width="22px" alt="" style="filter: brightness(0) invert(1);">
+                        </span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="cardUpper">
+                        <div class="cardUpperContent">
+                            <div class="cardUpperContentThumbnail">
+                                <img src="./imgs/War on The Ascension P5 - 1 of 2 - Word Archived Series - Youtube Template.png" width="310" height="auto" alt="">
+                            </div>
+                           
+                        </div>
+                    </div>
+                    <br>
+                    <div class="cardLower" style="display: flex; align-items: center; padding-left: 10px; padding-right: 10px; font-size: 10px;">
+                        <span class="profileCardIcon">
+                            <img src="./Logos/Bible Culture White Logo.png" width="25px" alt="" style="filter: brightness(0) invert(1);">
+                        </span>
+                        <span class="briefCard">
+                            <span>
+                                <span style="font-weight: bolder;">Do Well Part 4: Mimicking Divinity</span>
+                                 <br>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Qui perferendis quos!</span>
+                        </span>
+                        <span class="hiddenCardMenu" id="div-button">
+                            <img src="./Icons/icons8-play-100.png" width="22px" alt="" style="filter: brightness(0) invert(1);">
+                        </span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="cardUpper">
+                        <div class="cardUpperContent">
+                            <div class="cardUpperContentThumbnail">
+                                <img src="./imgs/War on The Ascension P4 - Word Archived Series - Youtube Template v4.png" width="310" height="auto" alt="">
+                            </div>
+                           
+                        </div>
+                    </div>
+                    <br>
+                    <div class="cardLower" style="display: flex; align-items: center; padding-left: 10px; padding-right: 10px; font-size: 10px;">
+                        <span class="profileCardIcon">
+                            <img src="./Logos/Bible Culture White Logo.png" width="25px" alt="" style="filter: brightness(0) invert(1);">
+                        </span>
+                        <span class="briefCard">
+                            <span>
+                                <span style="font-weight: bolder;">Do Well Part 4: Mimicking Divinity</span>
+                                 <br>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Qui perferendis quos!</span>
+                        </span>
+                        <span class="hiddenCardMenu" id="div-button">
+                            <img src="./Icons/icons8-play-100.png" width="22px" alt="" style="filter: brightness(0) invert(1);">
+                        </span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="cardUpper">
+                        <div class="cardUpperContent">
+                            <div class="cardUpperContentThumbnail">
+                                <img src="./imgs/Do Well Part 4 - Mimicking Divinity - Word Archived Series - Youtube Template v2.png" width="310" height="auto" alt="">
+                            </div>
+                           
+                        </div>
+                    </div>
+                    <br>
+                    <div class="cardLower" style="display: flex; align-items: center; padding-left: 10px; padding-right: 10px; font-size: 10px;">
+                        <span class="profileCardIcon">
+                            <img src="./Logos/Bible Culture White Logo.png" width="25px" alt="" style="filter: brightness(0) invert(1);">
+                        </span>
+                        <span class="briefCard">
+                            <span>
+                                <span style="font-weight: bolder;">Do Well Part 4: Mimicking Divinity</span>
+                                 <br>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Qui perferendis quos!</span>
+                        </span>
+                        <span class="hiddenCardMenu" id="div-button">
+                            <img src="./Icons/icons8-play-100.png" width="22px" alt="" style="filter: brightness(0) invert(1);">
+                        </span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="cardUpper">
+                        <div class="cardUpperContent">
+                            <div class="cardUpperContentThumbnail">
+                                <img src="./imgs/War on The Ascension Part 2- Word Archived Series - Youtube Template v2.png" width="310" height="auto" alt="">
+                            </div>
+                           
+                        </div>
+                    </div>
+                    <br>
+                    <div class="cardLower" style="display: flex; align-items: center; padding-left: 10px; padding-right: 10px; font-size: 10px;">
+                        <span class="profileCardIcon">
+                            <img src="./Logos/Bible Culture White Logo.png" width="25px" alt="" style="filter: brightness(0) invert(1);">
+                        </span>
+                        <span class="briefCard">
+                            <span>
+                                <span style="font-weight: bolder;">Do Well Part 4: Mimicking Divinity</span>
+                                 <br>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Qui perferendis quos!</span>
+                        </span>
+                        <span class="hiddenCardMenu" id="div-button">
+                            <img src="./Icons/icons8-play-100.png" width="22px" alt="" style="filter: brightness(0) invert(1);">
+                        </span>
+                    </div>
+                </div>
+                <!--
+                Card template
+                
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                -->
+    
+                <!--hidden preview here-->
+        <div class="previewBg">
+            <div id="preview" class="hidden">
+                <div class="previewMenu">
+                    <div class="previewMenuLogo">
+                        <img src="./Logos/Bible Culture White Logo.png" width="40" alt="" style="filter: brightness(0) invert(1);">
+                           BibleCultureTLC
+                    </div>
+                    <div class="previewMenuInfo">
+                        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                        <button id="closePreviewPanel" class="playBtn">Close</button>
+    
+                    <!--<button class="playBtn">Close</button>
+                        <button class="closeBtn">Play</button>-->
+                    </div>
+                </div> 
+                <div class="previewVid">
+                     <!--<video src="./videos/Do Well Part 4 - Mimicking Divinity.mp4"  width="940" height="510" controls></video>
+               <div class="console"></div>-->
+                </div>
+            </div>
+        </div>       
+    
+            </div>
+            <!--New Section here-->
+            <div class="newSection" id="newSectionId">
+                <span></span>
+                    <!-- <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    Testing New Section & Content
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br> -->
+                </span>
+            </div>
+            <!--Explore Section here-->
+            <div class="exploreSection" id="exploreSectionId">
+                
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    
+                    <br>
+                    <br>
+                    <span style="font-size: 30px; color: #ffffff; font-family: Montserrat-ExtraBold;">Empty</span><br>
+                    <span style="font-size: 12px; color: #ffffff;">(No saved/favourated videos and messages!)</span>
+                    <br>
+                    <a href="./Supporting pages/Login Page.html" style="text-decoration: none;" title="Login here"><span style="font-size: 10px; color:  #ecaa54;">Login to view saved contents</span></a>
+                    
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+
+                <!--hidden preview here-->
+        <div class="previewBg">
+            <div id="preview" class="hidden">
+                <div class="previewMenu">
+                    <div class="previewMenuLogo">
+                        <img src="./Logos/Bible Culture White Logo.png" width="40" alt="" style="filter: brightness(0) invert(1);">
+                           BibleCultureTLC
+                    </div>
+                    <div class="previewMenuInfo">
+                        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                        <button id="closePreviewPanel" class="closeBtn">Close</button>
+    
+                    <!--<button class="playBtn">Close</button>
+                        <button class="closeBtn">Play</button>-->
+                    </div>
+                </div> 
+                <div class="previewVid">
+                     <!--<video src="./videos/Do Well Part 4 - Mimicking Divinity.mp4"  width="940" height="510" controls></video>
+               <div class="console"></div>-->
+                </div>
+            </div>
+        </div>       
+    
+            </div>
+            <!--Series Section here-->
+            <div class="SeriesSection" id="Series">
+                <span>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    Testing Series Section & Content
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                </span>
+            </div>
+            <!--Shorts Section here-->
+            <div class="shortsSection" id="shortsSectionId">
+                <span></span>
+                    <div class="reels">
+                        <div class="reelsCard" id="reelsCard1">
+                           <div class="reelPanel">
+                            <div class="reelCard">
+                                <div class="upperReelCard">
+                                    <div class="reelPreview">
+                                         <img src="./Icons/image.png" width="70" alt="saved" style="filter: brightness(0) invert(1); opacity: 50%;">
+                                       
+                                    </div>
+                                </div>
+                                <div class="lowerReelCard">
+                                    <div class="playtReelBtn">Play</div>
+                                    <div class="saveReelBtn">
+                                        <img src="./Icons/share.png" width="20" alt="saved" style="filter: brightness(0) invert(1);">
+                                    </div>
+                                    <div class="shareReelBtn">
+                                        <img src="./Icons/icons8-favorites-500.png" width="20" alt="saved" style="filter: brightness(0) invert(1);">
+                                    </div>
+                                </div>
+                            </div>
+                            
+                       
+                            </div> 
+                            <div class="reelPanel">
+                            <div class="reelCard">
+                                <div class="upperReelCard">
+                                    <div class="reelPreview">
+                                         <img src="./Icons/image.png" width="70" alt="saved" style="filter: brightness(0) invert(1); opacity: 50%;">
+                                       
+                                    </div>
+                                </div>
+                                <div class="lowerReelCard">
+                                    <div class="playtReelBtn">Play</div>
+                                    <div class="saveReelBtn">
+                                        <img src="./Icons/share.png" width="20" alt="saved" style="filter: brightness(0) invert(1);">
+                                    </div>
+                                    <div class="shareReelBtn">
+                                        <img src="./Icons/icons8-favorites-500.png" width="20" alt="saved" style="filter: brightness(0) invert(1);">
+                                    </div>
+                                </div>
+                            </div>
+                            
+                       
+                            </div> 
+                            <div class="reelPanel">
+                            <div class="reelCard">
+                                <div class="upperReelCard">
+                                    <div class="reelPreview">
+                                         <img src="./Icons/image.png" width="70" alt="saved" style="filter: brightness(0) invert(1); opacity: 50%;">
+                                       
+                                    </div>
+                                </div>
+                                <div class="lowerReelCard">
+                                    <div class="playtReelBtn">Play</div>
+                                    <div class="saveReelBtn">
+                                        <img src="./Icons/share.png" width="20" alt="saved" style="filter: brightness(0) invert(1);">
+                                    </div>
+                                    <div class="shareReelBtn">
+                                        <img src="./Icons/icons8-favorites-500.png" width="20" alt="saved" style="filter: brightness(0) invert(1);">
+                                    </div>
+                                </div>
+                            </div>
+                        
+                       
+                            </div>
+                             <div class="reelPanel">
+                            <div class="reelCard">
+                                <div class="upperReelCard">
+                                    <div class="reelPreview">
+                                         <img src="./Icons/image.png" width="70" alt="saved" style="filter: brightness(0) invert(1); opacity: 50%;">
+                                       
+                                    </div>
+                                </div>
+                                <div class="lowerReelCard">
+                                    <div class="playtReelBtn">Play</div>
+                                    <div class="saveReelBtn">
+                                        <img src="./Icons/share.png" width="20" alt="saved" style="filter: brightness(0) invert(1);">
+                                    </div>
+                                    <div class="shareReelBtn">
+                                        <img src="./Icons/icons8-favorites-500.png" width="20" alt="saved" style="filter: brightness(0) invert(1);">
+                                    </div>
+                                </div>
+                            </div>
+                            
+                       
+                            </div> 
+                            <div class="reelPanel">
+                            <div class="reelCard">
+                                <div class="upperReelCard">
+                                    <div class="reelPreview">
+                                         <img src="./Icons/image.png" width="70" alt="saved" style="filter: brightness(0) invert(1); opacity: 50%;">
+                                       
+                                    </div>
+                                </div>
+                                <div class="lowerReelCard">
+                                    <div class="playtReelBtn">Play</div>
+                                    <div class="saveReelBtn">
+                                        <img src="./Icons/share.png" width="20" alt="saved" style="filter: brightness(0) invert(1);">
+                                    </div>
+                                    <div class="shareReelBtn">
+                                        <img src="./Icons/icons8-favorites-500.png" width="20" alt="saved" style="filter: brightness(0) invert(1);">
+                                    </div>
+                                </div>
+                            </div>
+                            
+                       
+                            </div> 
+                            <div class="reelPanel">
+                            <div class="reelCard">
+                                <div class="upperReelCard">
+                                    <div class="reelPreview">
+                                         <img src="./Icons/image.png" width="70" alt="saved" style="filter: brightness(0) invert(1); opacity: 50%;">
+                                       
+                                    </div>
+                                </div>
+                                <div class="lowerReelCard">
+                                    <div class="playtReelBtn">Play</div>
+                                    <div class="saveReelBtn">
+                                        <img src="./Icons/share.png" width="20" alt="saved" style="filter: brightness(0) invert(1);">
+                                    </div>
+                                    <div class="shareReelBtn">
+                                        <img src="./Icons/icons8-favorites-500.png" width="20" alt="saved" style="filter: brightness(0) invert(1);">
+                                    </div>
+                                </div>
+                            </div>
+                        
+                       
+                            </div>
+                            <div class="reelPanel">
+                                <div class="reelCard">
+                                    <div class="upperReelCard">
+                                        <div class="reelPreview">
+                                             <img src="./Icons/image.png" width="70" alt="saved" style="filter: brightness(0) invert(1); opacity: 50%;">
+                                           
+                                        </div>
+                                    </div>
+                                    <div class="lowerReelCard">
+                                        <div class="playtReelBtn">Play</div>
+                                        <div class="saveReelBtn">
+                                            <img src="./Icons/share.png" width="20" alt="saved" style="filter: brightness(0) invert(1);">
+                                        </div>
+                                        <div class="shareReelBtn">
+                                            <img src="./Icons/icons8-favorites-500.png" width="20" alt="saved" style="filter: brightness(0) invert(1);">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                           
+                            </div> 
+                            <div class="reelPanel">
+                                <div class="reelCard">
+                                    <div class="upperReelCard">
+                                        <div class="reelPreview">
+                                             <img src="./Icons/image.png" width="70" alt="saved" style="filter: brightness(0) invert(1); opacity: 50%;">
+                                           
+                                        </div>
+                                    </div>
+                                    <div class="lowerReelCard">
+                                        <div class="playtReelBtn">Play</div>
+                                        <div class="saveReelBtn">
+                                            <img src="./Icons/share.png" width="20" alt="saved" style="filter: brightness(0) invert(1);">
+                                        </div>
+                                        <div class="shareReelBtn">
+                                            <img src="./Icons/icons8-favorites-500.png" width="20" alt="saved" style="filter: brightness(0) invert(1);">
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                           
+                            </div>
+                            <div class="reelPanel">
+                                <div class="reelCard">
+                                    <div class="upperReelCard">
+                                        <div class="reelPreview">
+                                             <img src="./Icons/image.png" width="70" alt="saved" style="filter: brightness(0) invert(1); opacity: 50%;">
+                                           
+                                        </div>
+                                    </div>
+                                    <div class="lowerReelCard">
+                                        <div class="playtReelBtn">Play</div>
+                                        <div class="saveReelBtn">
+                                            <img src="./Icons/share.png" width="20" alt="saved" style="filter: brightness(0) invert(1);">
+                                        </div>
+                                        <div class="shareReelBtn">
+                                            <img src="./Icons/icons8-favorites-500.png" width="20" alt="saved" style="filter: brightness(0) invert(1);">
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                           
+                            </div>
+                            <div class="reelPanel">
+                                <div class="reelCard">
+                                    <div class="upperReelCard">
+                                        <div class="reelPreview">
+                                             <img src="./Icons/image.png" width="70" alt="saved" style="filter: brightness(0) invert(1); opacity: 50%;">
+                                           
+                                        </div>
+                                    </div>
+                                    <div class="lowerReelCard">
+                                        <div class="playtReelBtn">Play</div>
+                                        <div class="saveReelBtn">
+                                            <img src="./Icons/share.png" width="20" alt="saved" style="filter: brightness(0) invert(1);">
+                                        </div>
+                                        <div class="shareReelBtn">
+                                            <img src="./Icons/icons8-favorites-500.png" width="20" alt="saved" style="filter: brightness(0) invert(1);">
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                           
+                            </div>
+                            <div class="reelPanel">
+                                <div class="reelCard">
+                                    <div class="upperReelCard">
+                                        <div class="reelPreview">
+                                             <img src="./Icons/image.png" width="70" alt="saved" style="filter: brightness(0) invert(1); opacity: 50%;">
+                                           
+                                        </div>
+                                    </div>
+                                    <div class="lowerReelCard">
+                                        <div class="playtReelBtn">Play</div>
+                                        <div class="saveReelBtn">
+                                            <img src="./Icons/share.png" width="20" alt="saved" style="filter: brightness(0) invert(1);">
+                                        </div>
+                                        <div class="shareReelBtn">
+                                            <img src="./Icons/icons8-favorites-500.png" width="20" alt="saved" style="filter: brightness(0) invert(1);">
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                           
+                            </div>
+                            <div class="reelPanel">
+                                <div class="reelCard">
+                                    <div class="upperReelCard">
+                                        <div class="reelPreview">
+                                             <img src="./Icons/image.png" width="70" alt="saved" style="filter: brightness(0) invert(1); opacity: 50%;">
+                                           
+                                        </div>
+                                    </div>
+                                    <div class="lowerReelCard">
+                                        <div class="playtReelBtn">Play</div>
+                                        <div class="saveReelBtn">
+                                            <img src="./Icons/share.png" width="20" alt="saved" style="filter: brightness(0) invert(1);">
+                                        </div>
+                                        <div class="shareReelBtn">
+                                            <img src="./Icons/icons8-favorites-500.png" width="20" alt="saved" style="filter: brightness(0) invert(1);">
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                           
+                            </div>
+                            <br>
+                        <br>
+                        <span class="BtnClass">
+                            <button class="showMoreBtn" id="BtnClass">Show more</button>    
+                        </span>
+                        <br>
+                    </div>
+                        <br>
+                        <div class="reelsCard" id="reelsCard2">
+                            <div class="reelPanel">
+                             <div class="reelCard">
+                                 <div class="upperReelCard">
+                                     <div class="reelPreview">
+                                          <img src="./Icons/image.png" width="70" alt="saved" style="filter: brightness(0) invert(1); opacity: 50%;">
+                                        
+                                     </div>
+                                 </div>
+                                 <div class="lowerReelCard">
+                                     <div class="playtReelBtn">Play</div>
+                                     <div class="saveReelBtn">
+                                         <img src="./Icons/share.png" width="20" alt="saved" style="filter: brightness(0) invert(1);">
+                                     </div>
+                                     <div class="shareReelBtn">
+                                         <img src="./Icons/icons8-favorites-500.png" width="20" alt="saved" style="filter: brightness(0) invert(1);">
+                                     </div>
+                                 </div>
+                             </div>
+                             
+                        
+                             </div> 
+                             <div class="reelPanel">
+                             <div class="reelCard">
+                                 <div class="upperReelCard">
+                                     <div class="reelPreview">
+                                          <img src="./Icons/image.png" width="70" alt="saved" style="filter: brightness(0) invert(1); opacity: 50%;">
+                                        
+                                     </div>
+                                 </div>
+                                 <div class="lowerReelCard">
+                                     <div class="playtReelBtn">Play</div>
+                                     <div class="saveReelBtn">
+                                         <img src="./Icons/share.png" width="20" alt="saved" style="filter: brightness(0) invert(1);">
+                                     </div>
+                                     <div class="shareReelBtn">
+                                         <img src="./Icons/icons8-favorites-500.png" width="20" alt="saved" style="filter: brightness(0) invert(1);">
+                                     </div>
+                                 </div>
+                             </div>
+                             
+                        
+                             </div> 
+                             <div class="reelPanel">
+                             <div class="reelCard">
+                                 <div class="upperReelCard">
+                                     <div class="reelPreview">
+                                          <img src="./Icons/image.png" width="70" alt="saved" style="filter: brightness(0) invert(1); opacity: 50%;">
+                                        
+                                     </div>
+                                 </div>
+                                 <div class="lowerReelCard">
+                                     <div class="playtReelBtn">Play</div>
+                                     <div class="saveReelBtn">
+                                         <img src="./Icons/share.png" width="20" alt="saved" style="filter: brightness(0) invert(1);">
+                                     </div>
+                                     <div class="shareReelBtn">
+                                         <img src="./Icons/icons8-favorites-500.png" width="20" alt="saved" style="filter: brightness(0) invert(1);">
+                                     </div>
+                                 </div>
+                             </div>
+                         
+                        
+                             </div>
+                              <div class="reelPanel">
+                             <div class="reelCard">
+                                 <div class="upperReelCard">
+                                     <div class="reelPreview">
+                                          <img src="./Icons/image.png" width="70" alt="saved" style="filter: brightness(0) invert(1); opacity: 50%;">
+                                        
+                                     </div>
+                                 </div>
+                                 <div class="lowerReelCard">
+                                     <div class="playtReelBtn">Play</div>
+                                     <div class="saveReelBtn">
+                                         <img src="./Icons/share.png" width="20" alt="saved" style="filter: brightness(0) invert(1);">
+                                     </div>
+                                     <div class="shareReelBtn">
+                                         <img src="./Icons/icons8-favorites-500.png" width="20" alt="saved" style="filter: brightness(0) invert(1);">
+                                     </div>
+                                 </div>
+                             </div>
+                             
+                        
+                             </div> 
+                             <div class="reelPanel">
+                             <div class="reelCard">
+                                 <div class="upperReelCard">
+                                     <div class="reelPreview">
+                                          <img src="./Icons/image.png" width="70" alt="saved" style="filter: brightness(0) invert(1); opacity: 50%;">
+                                        
+                                     </div>
+                                 </div>
+                                 <div class="lowerReelCard">
+                                     <div class="playtReelBtn">Play</div>
+                                     <div class="saveReelBtn">
+                                         <img src="./Icons/share.png" width="20" alt="saved" style="filter: brightness(0) invert(1);">
+                                     </div>
+                                     <div class="shareReelBtn">
+                                         <img src="./Icons/icons8-favorites-500.png" width="20" alt="saved" style="filter: brightness(0) invert(1);">
+                                     </div>
+                                 </div>
+                             </div>
+                             
+                        
+                             </div> 
+                             <div class="reelPanel">
+                             <div class="reelCard">
+                                 <div class="upperReelCard">
+                                     <div class="reelPreview">
+                                          <img src="./Icons/image.png" width="70" alt="saved" style="filter: brightness(0) invert(1); opacity: 50%;">
+                                        
+                                     </div>
+                                 </div>
+                                 <div class="lowerReelCard">
+                                     <div class="playtReelBtn">Play</div>
+                                     <div class="saveReelBtn">
+                                         <img src="./Icons/share.png" width="20" alt="saved" style="filter: brightness(0) invert(1);">
+                                     </div>
+                                     <div class="shareReelBtn">
+                                         <img src="./Icons/icons8-favorites-500.png" width="20" alt="saved" style="filter: brightness(0) invert(1);">
+                                     </div>
+                                 </div>
+                             </div>
+                         
+                        
+                             </div>
+                             <div class="reelPanel">
+                                 <div class="reelCard">
+                                     <div class="upperReelCard">
+                                         <div class="reelPreview">
+                                              <img src="./Icons/image.png" width="70" alt="saved" style="filter: brightness(0) invert(1); opacity: 50%;">
+                                            
+                                         </div>
+                                     </div>
+                                     <div class="lowerReelCard">
+                                         <div class="playtReelBtn">Play</div>
+                                         <div class="saveReelBtn">
+                                             <img src="./Icons/share.png" width="20" alt="saved" style="filter: brightness(0) invert(1);">
+                                         </div>
+                                         <div class="shareReelBtn">
+                                             <img src="./Icons/icons8-favorites-500.png" width="20" alt="saved" style="filter: brightness(0) invert(1);">
+                                         </div>
+                                     </div>
+                                 </div>
+                                 
+                            
+                             </div> 
+                             <div class="reelPanel">
+                                 <div class="reelCard">
+                                     <div class="upperReelCard">
+                                         <div class="reelPreview">
+                                              <img src="./Icons/image.png" width="70" alt="saved" style="filter: brightness(0) invert(1); opacity: 50%;">
+                                            
+                                         </div>
+                                     </div>
+                                     <div class="lowerReelCard">
+                                         <div class="playtReelBtn">Play</div>
+                                         <div class="saveReelBtn">
+                                             <img src="./Icons/share.png" width="20" alt="saved" style="filter: brightness(0) invert(1);">
+                                         </div>
+                                         <div class="shareReelBtn">
+                                             <img src="./Icons/icons8-favorites-500.png" width="20" alt="saved" style="filter: brightness(0) invert(1);">
+                                         </div>
+                                     </div>
+                                 </div>
+                             
+                            
+                             </div>
+                             <div class="reelPanel">
+                                 <div class="reelCard">
+                                     <div class="upperReelCard">
+                                         <div class="reelPreview">
+                                              <img src="./Icons/image.png" width="70" alt="saved" style="filter: brightness(0) invert(1); opacity: 50%;">
+                                            
+                                         </div>
+                                     </div>
+                                     <div class="lowerReelCard">
+                                         <div class="playtReelBtn">Play</div>
+                                         <div class="saveReelBtn">
+                                             <img src="./Icons/share.png" width="20" alt="saved" style="filter: brightness(0) invert(1);">
+                                         </div>
+                                         <div class="shareReelBtn">
+                                             <img src="./Icons/icons8-favorites-500.png" width="20" alt="saved" style="filter: brightness(0) invert(1);">
+                                         </div>
+                                     </div>
+                                 </div>
+                             
+                            
+                             </div>
+                             <div class="reelPanel">
+                                 <div class="reelCard">
+                                     <div class="upperReelCard">
+                                         <div class="reelPreview">
+                                              <img src="./Icons/image.png" width="70" alt="saved" style="filter: brightness(0) invert(1); opacity: 50%;">
+                                            
+                                         </div>
+                                     </div>
+                                     <div class="lowerReelCard">
+                                         <div class="playtReelBtn">Play</div>
+                                         <div class="saveReelBtn">
+                                             <img src="./Icons/share.png" width="20" alt="saved" style="filter: brightness(0) invert(1);">
+                                         </div>
+                                         <div class="shareReelBtn">
+                                             <img src="./Icons/icons8-favorites-500.png" width="20" alt="saved" style="filter: brightness(0) invert(1);">
+                                         </div>
+                                     </div>
+                                 </div>
+                             
+                            
+                             </div>
+                             <div class="reelPanel">
+                                 <div class="reelCard">
+                                     <div class="upperReelCard">
+                                         <div class="reelPreview">
+                                              <img src="./Icons/image.png" width="70" alt="saved" style="filter: brightness(0) invert(1); opacity: 50%;">
+                                            
+                                         </div>
+                                     </div>
+                                     <div class="lowerReelCard">
+                                         <div class="playtReelBtn">Play</div>
+                                         <div class="saveReelBtn">
+                                             <img src="./Icons/share.png" width="20" alt="saved" style="filter: brightness(0) invert(1);">
+                                         </div>
+                                         <div class="shareReelBtn">
+                                             <img src="./Icons/icons8-favorites-500.png" width="20" alt="saved" style="filter: brightness(0) invert(1);">
+                                         </div>
+                                     </div>
+                                 </div>
+                             
+                            
+                             </div>
+                             <div class="reelPanel">
+                                 <div class="reelCard">
+                                     <div class="upperReelCard">
+                                         <div class="reelPreview">
+                                              <img src="./Icons/image.png" width="70" alt="saved" style="filter: brightness(0) invert(1); opacity: 50%;">
+                                            
+                                         </div>
+                                     </div>
+                                     <div class="lowerReelCard">
+                                         <div class="playtReelBtn">Play</div>
+                                         <div class="saveReelBtn">
+                                             <img src="./Icons/share.png" width="20" alt="saved" style="filter: brightness(0) invert(1);">
+                                         </div>
+                                         <div class="shareReelBtn">
+                                             <img src="./Icons/icons8-favorites-500.png" width="20" alt="saved" style="filter: brightness(0) invert(1);">
+                                         </div>
+                                     </div>
+                                 </div>
+                             
+                            
+                             </div>
+                             <br>
+                            <br>
+                            <span class="BtnClass">
+                                <button class="showLessBtn" id="showLessBtnId">Show less</button>    
+                            </span>
+                            <br>
+                     </div>
+                        </div>
+
+
+
+
+
+
+
+
+                    <!--<div class="card">
+                    <div class="cardUpper">
+                        <div class="cardUpperContent">
+                            <div class="cardUpperContentThumbnail">
+                                <img src="./imgs/Do Well Part 5 - Reality's Perfect Picture - Word Archived Series - Youtube Template.png" width="310" height="auto" alt="">
+                            </div>
+                           
+                        </div>
+                    </div>
+                    <br>
+                    <div class="cardLower" style="display: flex; align-items: center; padding-left: 10px; padding-right: 10px; font-size: 10px;">
+                        <span class="profileCardIcon">
+                            <img src="./Logos/Bible Culture White Logo.png" width="25px" alt="" style="filter: brightness(0) invert(1);">
+                        </span>
+                        <span class="briefCard">
+                            
+                        </span>
+                        <span class="hiddenCardMenu" id="div-button">
+                            <img src="./Icons/icons8-play-100.png" width="22px" alt="" style="filter: brightness(0) invert(1);">
+                        </span>
+                    </div>
+                    </div>-->
+                </span>
+            </div>
+            <!--Saved & Favorates Section here-->
+            <div class="savedSection" id="savedSectionId" >
+                <span></span>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <img src="./Icons/folder.png" width="150" style="filter: brightness(0) invert(1);" alt="">
+                    <br>
+                    <br>
+                    <span style="font-size: 30px; color: #ffffff; font-family: Montserrat-ExtraBold;">Empty</span><br>
+                    <span style="font-size: 12px; color: #ffffff;">(No saved/favourated videos and messages!)</span>
+                    <br>
+                    <a href="./Supporting pages/Login Page.html" style="text-decoration: none;" title="Login here"><span style="font-size: 10px; color:  #ecaa54;">Login to view saved contents</span></a>
+                    
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                </span>
+            </div>
+        </div>
+        <div class="footer">
+            <span>
+                <span>
+                    <span style="font-size: 13px; font-family: Montserrat-ExtraBold; font-size: 15px;"> CONTACT INFO</span>
+                    <br>
+                    <br>
+                    <span class="footerContactLinks"><img src="./Icons/mail-inbox-app.png" width="25" alt="" style="filter: brightness(0) invert(1);">Email:BCTLC@gmail.com</span>
+                    <span class="footerContactLinks"><img src="./Icons/web.png" width="25" alt="" style="filter: brightness(0) invert(1);">Website: www.bctlc.com</span>
+                <br>
+                </span>
+                <br>
+                <br>
+            </span>
+                <span style="font-size: 12px; font-family: Montserrat-ExtraBold; color: #ffffff85;">
+                    <span style="font-size: 15px; color: #ffffff; ">GET STARTED!</span>
+                    <br>
+                    <br>
+                    <span class="getStarted">Series: <span style="font-family: Montserrat-Medium;"> Watch your favourates</span></span>
+                    <br><br><br>
+                    <span class="getStarted">Shorts: <span style="font-family: Montserrat-Medium;"> Watch 60 seconds short videos</span></span>
+                    <br><br><br>
+                    <span class="getStarted">Explore: <span style="font-family: Montserrat-Medium;"> Discover whats new!</span></span>
+                    <br><br><br>
+                    <span class="getStarted">Updates: <span style="font-family: Montserrat-Medium;"> Check for new notifications!</span></span>
+                    <br><br><br>
+                    <span class="getStarted">Favorates <span style="font-family: Montserrat-Medium;"> (Saved videos & messages)</span></span>
+                    <br><br><br>
+                    <span class="getStarted"><span>About us</span></span>  
+                </span>
+                <span>            
+                    <span></span>
+                    <span style="font-size: 13px; font-family: Montserrat-ExtraBold; font-size: 15px; color: #ffffff;">SOCIAL MEDIA HANDLES</span>
+                        <br>
+                        <br>
+                        <a href="https://www.instagram.com/fred_mjr37?igsh=OGQ5ZDc2ODk2ZA=="class="footerSocialLinks"><img src="./Icons/Youtube White Icon.png" width="25" alt="">Youtube: @BCTLC</a>
+                        <br>
+                        <a href="" class="footerSocialLinks"><img src="./Icons/Whatsapp white.png" width="25" alt="">WhatsApp: +260975986004/+260760932304</a>
+                        <br>
+                        <span style="font-size: 10px;">(social handles below will be avaliable soon)</span> 
+                        <br><br>
+                        <a href="https://www.facebook.com/share/1E54TZ5cx3oE9F58/?mibextid=qi2Omg" class="footerSocialLinks"><img src="./Icons/Facebook white.png" width="25" alt="">Facebook: @bctlcchannel</a>
+                        <br>
+                        <a href="https://www.instagram.com/fred_mjr37?igsh=OGQ5ZDc2ODk2ZA==" class="footerSocialLinks"><img src="./Icons/instragram white.png" width="25" alt="">Instagram: @bctlc_channel</a>
+                    <br>
+                    </span>
+        </div>
+        <div class="endFooter">
+            <span>@BCTLC 2024</span>
+            <span class="endFooterLeft">
+                <span>Learn & Be Inspired.</span>
+                <!--
+                <span>About us</span>
+                <span>Help</span>
+                <span>Terms & Conditions</span>-->
+            </span>
+        </div>
+    </div>
+    <script src="./Verson 2.0.js"></script>
+</body>
+</html>

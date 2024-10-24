@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #46330d;
+        }
+      
+       /*  .reelsCard{
+            
+             display: flex;
+             flex-wrap: wrap;
+             justify-content: center;
+             gap: 20px;
+        } */
+        .reelPanel{
+            float: left;
+            margin: 7px;
+            background-color: #ffffff;
+            width: 225px;
+            height: 340px;
+            border-radius: 5px;
+            padding: 3px;
+            padding-top: 6px;
+            box-shadow: 0 0 10px #00000075;
+        }
+        
+        .reelPanel:hover{
+            transform: scale(1.02);
+            transition-duration: 0.2s;
+        }
+        .reelPreview{
+            background-color: #021b23;
+            width: 220px;
+            height: 290px;
+            border-radius: 3px;
+            box-shadow: 0 0 10px #0000005e;
+            display: flex;
+            align-items: center;
+            justify-content:center ;
+        }
+        .upperReelCard{ 
+            display: flex;
+            justify-content: center;
+
+        }
+        .lowerReelCard{
+            display: flex;
+            justify-content: space-between;
+            padding-top: 7px;
+            padding-left: 3px;
+            padding-right: 3px;
+        }
+        .playtReelBtn{
+            background-color: #021b23;
+            width: 120px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #ffffff;
+            border-radius: 3px;
+            box-shadow: 0 0 10px #0000004f;
+        }
+        .playtReelBtn:hover{
+            background-color: #043342;
+            transition-duration: 0.5s;
+        }
+
+         .saveReelBtn{
+            background-color: #021b23;
+            width:40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #ffffff;
+        }
+        .saveReelBtn:hover{
+            background-color: #ecaa54;
+            transition-duration: 0.5s;
+        }
+
+        .shareReelBtn{
+            background-color: #021b23;
+            width:40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #ffffff;
+        }
+        .shareReelBtn:hover{
+            background-color: #ecaa54;
+            transition-duration: 0.5s;
+        }
+
+        .showMoreBtn{
+            border: none;
+            background-color: #021b23;
+            width: 120px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #ffffff;
+            border-radius: 3px;
+            box-shadow: 0 0 10px #0000004f;
+        }
+        .showMoreBtn:hover{
+            background-color: #ecaa54;
+            transition-duration: 0.5s;
+        }
+
+
+        .showLessBtn{
+            border: none;
+            background-color: #021b23;
+            width: 120px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #ffffff;
+            border-radius: 3px;
+            box-shadow: 0 0 10px #0000004f;
+        }
+        .showLessBtn:hover{
+            background-color: #ecaa54;
+            transition-duration: 0.5s;
+        }
+
+        .BtnClass{
+            padding-top: 40px;
+            display: flex;
+            justify-content: center;
+            clear: left;       
+        }
+        #reelsCard2{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="reels">
+    <div class="reelsCard" id="reelsCard1">
+       <div class="reelPanel">
+        <div class="reelCard">
+            <div class="upperReelCard">
+                <div class="reelPreview">
+                     <img src="./Icons/image.png" width="70" alt="saved" style="filter: brightness(0) invert(1); opacity: 50%;">
+                   
+                </div>
+            </div>
+            <div class="lowerReelCard">
+                <div class="playtReelBtn">Play</div>
+                <div class="saveReelBtn">
+                    <img src="./Icons/share.png" width="20" alt="saved" style="filter: brightness(0) invert(1);">
+                </div>
+                <div class="shareReelBtn">
+                    <img src="./Icons/icons8-favorites-500.png" width="20" alt="saved" style="filter: brightness(0) invert(1);">
+                </div>
+            </div>
+        </div>
+        
+   
+        </div> 
+        <div class="reelPanel">
+        <div class="reelCard">
+            <div class="upperReelCard">
+                <div class="reelPreview">
+                     <img src="./Icons/image.png" width="70" alt="saved" style="filter: brightness(0) invert(1); opacity: 50%;">
+                   
+                </div>
+            </div>
+            <div class="lowerReelCard">
+                <div class="playtReelBtn">Play</div>
+                <div class="saveReelBtn">
+                    <img src="./Icons/share.png" width="20" alt="saved" style="filter: brightness(0) invert(1);">
+                </div>
+                <div class="shareReelBtn">
+                    <img src="./Icons/icons8-favorites-500.png" width="20" alt="saved" style="filter: brightness(0) invert(1);">
+                </div>
+            </div>
+        </div>
+        
+   
+        </div> 
+        <div class="reelPanel">
+        <div class="reelCard">
+            <div class="upperReelCard">
+                <div class="reelPreview">
+                     <img src="./Icons/image.png" width="70" alt="saved" style="filter: brightness(0) invert(1); opacity: 50%;">
+                   
+                </div>
+            </div>
+            <div class="lowerReelCard">
+                <div class="playtReelBtn">Play</div>
+                <div class="saveReelBtn">
+                    <img src="./Icons/share.png" width="20" alt="saved" style="filter: brightness(0) invert(1);">
+                </div>
+                <div class="shareReelBtn">
+                    <img src="./Icons/icons8-favorites-500.png" width="20" alt="saved" style="filter: brightness(0) invert(1);">
+                </div>
+            </div>
+        </div>
+    
+   
+        </div>
+         <div class="reelPanel">
+        <div class="reelCard">
+            <div class="upperReelCard">
+                <div class="reelPreview">
+                     <img src="./Icons/image.png" width="70" alt="saved" style="filter: brightness(0) invert(1); opacity: 50%;">
+                   
+                </div>
+            </div>
+            <div class="lowerReelCard">
+                <div class="playtReelBtn">Play</div>
+                <div class="saveReelBtn">
+                    <img src="./Icons/share.png" width="20" alt="saved" style="filter: brightness(0) invert(1);">
+                </div>
+                <div class="shareReelBtn">
+                    <img src="./Icons/icons8-favorites-500.png" width="20" alt="saved" style="filter: brightness(0) invert(1);">
+                </div>
+            </div>
+        </div>
+        
+   
+        </div> 
+        <div class="reelPanel">
+        <div class="reelCard">
+            <div class="upperReelCard">
+                <div class="reelPreview">
+                     <img src="./Icons/image.png" width="70" alt="saved" style="filter: brightness(0) invert(1); opacity: 50%;">
+                   
+                </div>
+            </div>
+            <div class="lowerReelCard">
+                <div class="playtReelBtn">Play</div>
+                <div class="saveReelBtn">
+                    <img src="./Icons/share.png" width="20" alt="saved" style="filter: brightness(0) invert(1);">
+                </div>
+                <div class="shareReelBtn">
+                    <img src="./Icons/icons8-favorites-500.png" width="20" alt="saved" style="filter: brightness(0) invert(1);">
+                </div>
+            </div>
+        </div>
+        
+   
+        </div> 
+        <div class="reelPanel">
+        <div class="reelCard">
+            <div class="upperReelCard">
+                <div class="reelPreview">
+                     <img src="./Icons/image.png" width="70" alt="saved" style="filter: brightness(0) invert(1); opacity: 50%;">
+                   
+                </div>
+            </div>
+            <div class="lowerReelCard">
+                <div class="playtReelBtn">Play</div>
+                <div class="saveReelBtn">
+                    <img src="./Icons/share.png" width="20" alt="saved" style="filter: brightness(0) invert(1);">
+                </div>
+                <div class="shareReelBtn">
+                    <img src="./Icons/icons8-favorites-500.png" width="20" alt="saved" style="filter: brightness(0) invert(1);">
+                </div>
+            </div>
+        </div>
+    
+   
+        </div>
+        <div class="reelPanel">
+            <div class="reelCard">
+                <div class="upperReelCard">
+                    <div class="reelPreview">
+                         <img src="./Icons/image.png" width="70" alt="saved" style="filter: brightness(0) invert(1); opacity: 50%;">
+                       
+                    </div>
+                </div>
+                <div class="lowerReelCard">
+                    <div class="playtReelBtn">Play</div>
+                    <div class="saveReelBtn">
+                        <img src="./Icons/share.png" width="20" alt="saved" style="filter: brightness(0) invert(1);">
+                    </div>
+                    <div class="shareReelBtn">
+                        <img src="./Icons/icons8-favorites-500.png" width="20" alt="saved" style="filter: brightness(0) invert(1);">
+                    </div>
+                </div>
+            </div>
+            
+       
+        </div> 
+        <div class="reelPanel">
+            <div class="reelCard">
+                <div class="upperReelCard">
+                    <div class="reelPreview">
+                         <img src="./Icons/image.png" width="70" alt="saved" style="filter: brightness(0) invert(1); opacity: 50%;">
+                       
+                    </div>
+                </div>
+                <div class="lowerReelCard">
+                    <div class="playtReelBtn">Play</div>
+                    <div class="saveReelBtn">
+                        <img src="./Icons/share.png" width="20" alt="saved" style="filter: brightness(0) invert(1);">
+                    </div>
+                    <div class="shareReelBtn">
+                        <img src="./Icons/icons8-favorites-500.png" width="20" alt="saved" style="filter: brightness(0) invert(1);">
+                    </div>
+                </div>
+            </div>
+        
+       
+        </div>
+        <div class="reelPanel">
+            <div class="reelCard">
+                <div class="upperReelCard">
+                    <div class="reelPreview">
+                         <img src="./Icons/image.png" width="70" alt="saved" style="filter: brightness(0) invert(1); opacity: 50%;">
+                       
+                    </div>
+                </div>
+                <div class="lowerReelCard">
+                    <div class="playtReelBtn">Play</div>
+                    <div class="saveReelBtn">
+                        <img src="./Icons/share.png" width="20" alt="saved" style="filter: brightness(0) invert(1);">
+                    </div>
+                    <div class="shareReelBtn">
+                        <img src="./Icons/icons8-favorites-500.png" width="20" alt="saved" style="filter: brightness(0) invert(1);">
+                    </div>
+                </div>
+            </div>
+        
+       
+        </div>
+        <div class="reelPanel">
+            <div class="reelCard">
+                <div class="upperReelCard">
+                    <div class="reelPreview">
+                         <img src="./Icons/image.png" width="70" alt="saved" style="filter: brightness(0) invert(1); opacity: 50%;">
+                       
+                    </div>
+                </div>
+                <div class="lowerReelCard">
+                    <div class="playtReelBtn">Play</div>
+                    <div class="saveReelBtn">
+                        <img src="./Icons/share.png" width="20" alt="saved" style="filter: brightness(0) invert(1);">
+                    </div>
+                    <div class="shareReelBtn">
+                        <img src="./Icons/icons8-favorites-500.png" width="20" alt="saved" style="filter: brightness(0) invert(1);">
+                    </div>
+                </div>
+            </div>
+        
+       
+        </div>
+        <div class="reelPanel">
+            <div class="reelCard">
+                <div class="upperReelCard">
+                    <div class="reelPreview">
+                         <img src="./Icons/image.png" width="70" alt="saved" style="filter: brightness(0) invert(1); opacity: 50%;">
+                       
+                    </div>
+                </div>
+                <div class="lowerReelCard">
+                    <div class="playtReelBtn">Play</div>
+                    <div class="saveReelBtn">
+                        <img src="./Icons/share.png" width="20" alt="saved" style="filter: brightness(0) invert(1);">
+                    </div>
+                    <div class="shareReelBtn">
+                        <img src="./Icons/icons8-favorites-500.png" width="20" alt="saved" style="filter: brightness(0) invert(1);">
+                    </div>
+                </div>
+            </div>
+        
+       
+        </div>
+        <div class="reelPanel">
+            <div class="reelCard">
+                <div class="upperReelCard">
+                    <div class="reelPreview">
+                         <img src="./Icons/image.png" width="70" alt="saved" style="filter: brightness(0) invert(1); opacity: 50%;">
+                       
+                    </div>
+                </div>
+                <div class="lowerReelCard">
+                    <div class="playtReelBtn">Play</div>
+                    <div class="saveReelBtn">
+                        <img src="./Icons/share.png" width="20" alt="saved" style="filter: brightness(0) invert(1);">
+                    </div>
+                    <div class="shareReelBtn">
+                        <img src="./Icons/icons8-favorites-500.png" width="20" alt="saved" style="filter: brightness(0) invert(1);">
+                    </div>
+                </div>
+            </div>
+        
+       
+        </div>
+        <br>
+    <br>
+    <span class="BtnClass">
+        <button class="showMoreBtn" id="BtnClass">Show more</button>    
+    </span>
+    <br>
+</div>
+    <br>
+    <div class="reelsCard" id="reelsCard2">
+       <div class="reelPanel">
+        <div class="reelCard">
+            <div class="upperReelCard">
+                <div class="reelPreview">
+                     <img src="./Icons/image.png" width="70" alt="saved" style="filter: brightness(0) invert(1); opacity: 50%;">
+                   
+                </div>
+            </div>
+            <div class="lowerReelCard">
+                <div class="playtReelBtn">Play</div>
+                <div class="saveReelBtn">
+                    <img src="./Icons/share.png" width="20" alt="saved" style="filter: brightness(0) invert(1);">
+                </div>
+                <div class="shareReelBtn">
+                    <img src="./Icons/icons8-favorites-500.png" width="20" alt="saved" style="filter: brightness(0) invert(1);">
+                </div>
+            </div>
+        </div>
+        
+   
+        </div> 
+        <div class="reelPanel">
+        <div class="reelCard">
+            <div class="upperReelCard">
+                <div class="reelPreview">
+                     <img src="./Icons/image.png" width="70" alt="saved" style="filter: brightness(0) invert(1); opacity: 50%;">
+                   
+                </div>
+            </div>
+            <div class="lowerReelCard">
+                <div class="playtReelBtn">Play</div>
+                <div class="saveReelBtn">
+                    <img src="./Icons/share.png" width="20" alt="saved" style="filter: brightness(0) invert(1);">
+                </div>
+                <div class="shareReelBtn">
+                    <img src="./Icons/icons8-favorites-500.png" width="20" alt="saved" style="filter: brightness(0) invert(1);">
+                </div>
+            </div>
+        </div>
+        
+   
+        </div> 
+        <div class="reelPanel">
+        <div class="reelCard">
+            <div class="upperReelCard">
+                <div class="reelPreview">
+                     <img src="./Icons/image.png" width="70" alt="saved" style="filter: brightness(0) invert(1); opacity: 50%;">
+                   
+                </div>
+            </div>
+            <div class="lowerReelCard">
+                <div class="playtReelBtn">Play</div>
+                <div class="saveReelBtn">
+                    <img src="./Icons/share.png" width="20" alt="saved" style="filter: brightness(0) invert(1);">
+                </div>
+                <div class="shareReelBtn">
+                    <img src="./Icons/icons8-favorites-500.png" width="20" alt="saved" style="filter: brightness(0) invert(1);">
+                </div>
+            </div>
+        </div>
+    
+   
+        </div>
+         <div class="reelPanel">
+        <div class="reelCard">
+            <div class="upperReelCard">
+                <div class="reelPreview">
+                     <img src="./Icons/image.png" width="70" alt="saved" style="filter: brightness(0) invert(1); opacity: 50%;">
+                   
+                </div>
+            </div>
+            <div class="lowerReelCard">
+                <div class="playtReelBtn">Play</div>
+                <div class="saveReelBtn">
+                    <img src="./Icons/share.png" width="20" alt="saved" style="filter: brightness(0) invert(1);">
+                </div>
+                <div class="shareReelBtn">
+                    <img src="./Icons/icons8-favorites-500.png" width="20" alt="saved" style="filter: brightness(0) invert(1);">
+                </div>
+            </div>
+        </div>
+        
+   
+        </div> 
+        <div class="reelPanel">
+        <div class="reelCard">
+            <div class="upperReelCard">
+                <div class="reelPreview">
+                     <img src="./Icons/image.png" width="70" alt="saved" style="filter: brightness(0) invert(1); opacity: 50%;">
+                   
+                </div>
+            </div>
+            <div class="lowerReelCard">
+                <div class="playtReelBtn">Play</div>
+                <div class="saveReelBtn">
+                    <img src="./Icons/share.png" width="20" alt="saved" style="filter: brightness(0) invert(1);">
+                </div>
+                <div class="shareReelBtn">
+                    <img src="./Icons/icons8-favorites-500.png" width="20" alt="saved" style="filter: brightness(0) invert(1);">
+                </div>
+            </div>
+        </div>
+        
+   
+        </div> 
+        <div class="reelPanel">
+        <div class="reelCard">
+            <div class="upperReelCard">
+                <div class="reelPreview">
+                     <img src="./Icons/image.png" width="70" alt="saved" style="filter: brightness(0) invert(1); opacity: 50%;">
+                   
+                </div>
+            </div>
+            <div class="lowerReelCard">
+                <div class="playtReelBtn">Play</div>
+                <div class="saveReelBtn">
+                    <img src="./Icons/share.png" width="20" alt="saved" style="filter: brightness(0) invert(1);">
+                </div>
+                <div class="shareReelBtn">
+                    <img src="./Icons/icons8-favorites-500.png" width="20" alt="saved" style="filter: brightness(0) invert(1);">
+                </div>
+            </div>
+        </div>
+    
+   
+        </div>
+        <div class="reelPanel">
+            <div class="reelCard">
+                <div class="upperReelCard">
+                    <div class="reelPreview">
+                         <img src="./Icons/image.png" width="70" alt="saved" style="filter: brightness(0) invert(1); opacity: 50%;">
+                       
+                    </div>
+                </div>
+                <div class="lowerReelCard">
+                    <div class="playtReelBtn">Play</div>
+                    <div class="saveReelBtn">
+                        <img src="./Icons/share.png" width="20" alt="saved" style="filter: brightness(0) invert(1);">
+                    </div>
+                    <div class="shareReelBtn">
+                        <img src="./Icons/icons8-favorites-500.png" width="20" alt="saved" style="filter: brightness(0) invert(1);">
+                    </div>
+                </div>
+            </div>
+            
+       
+        </div> 
+        <div class="reelPanel">
+            <div class="reelCard">
+                <div class="upperReelCard">
+                    <div class="reelPreview">
+                         <img src="./Icons/image.png" width="70" alt="saved" style="filter: brightness(0) invert(1); opacity: 50%;">
+                       
+                    </div>
+                </div>
+                <div class="lowerReelCard">
+                    <div class="playtReelBtn">Play</div>
+                    <div class="saveReelBtn">
+                        <img src="./Icons/share.png" width="20" alt="saved" style="filter: brightness(0) invert(1);">
+                    </div>
+                    <div class="shareReelBtn">
+                        <img src="./Icons/icons8-favorites-500.png" width="20" alt="saved" style="filter: brightness(0) invert(1);">
+                    </div>
+                </div>
+            </div>
+        
+       
+        </div>
+        <div class="reelPanel">
+            <div class="reelCard">
+                <div class="upperReelCard">
+                    <div class="reelPreview">
+                         <img src="./Icons/image.png" width="70" alt="saved" style="filter: brightness(0) invert(1); opacity: 50%;">
+                       
+                    </div>
+                </div>
+                <div class="lowerReelCard">
+                    <div class="playtReelBtn">Play</div>
+                    <div class="saveReelBtn">
+                        <img src="./Icons/share.png" width="20" alt="saved" style="filter: brightness(0) invert(1);">
+                    </div>
+                    <div class="shareReelBtn">
+                        <img src="./Icons/icons8-favorites-500.png" width="20" alt="saved" style="filter: brightness(0) invert(1);">
+                    </div>
+                </div>
+            </div>
+        
+       
+        </div>
+        <div class="reelPanel">
+            <div class="reelCard">
+                <div class="upperReelCard">
+                    <div class="reelPreview">
+                         <img src="./Icons/image.png" width="70" alt="saved" style="filter: brightness(0) invert(1); opacity: 50%;">
+                       
+                    </div>
+                </div>
+                <div class="lowerReelCard">
+                    <div class="playtReelBtn">Play</div>
+                    <div class="saveReelBtn">
+                        <img src="./Icons/share.png" width="20" alt="saved" style="filter: brightness(0) invert(1);">
+                    </div>
+                    <div class="shareReelBtn">
+                        <img src="./Icons/icons8-favorites-500.png" width="20" alt="saved" style="filter: brightness(0) invert(1);">
+                    </div>
+                </div>
+            </div>
+        
+       
+        </div>
+        <div class="reelPanel">
+            <div class="reelCard">
+                <div class="upperReelCard">
+                    <div class="reelPreview">
+                         <img src="./Icons/image.png" width="70" alt="saved" style="filter: brightness(0) invert(1); opacity: 50%;">
+                       
+                    </div>
+                </div>
+                <div class="lowerReelCard">
+                    <div class="playtReelBtn">Play</div>
+                    <div class="saveReelBtn">
+                        <img src="./Icons/share.png" width="20" alt="saved" style="filter: brightness(0) invert(1);">
+                    </div>
+                    <div class="shareReelBtn">
+                        <img src="./Icons/icons8-favorites-500.png" width="20" alt="saved" style="filter: brightness(0) invert(1);">
+                    </div>
+                </div>
+            </div>
+        
+       
+        </div>
+        <div class="reelPanel">
+            <div class="reelCard">
+                <div class="upperReelCard">
+                    <div class="reelPreview">
+                         <img src="./Icons/image.png" width="70" alt="saved" style="filter: brightness(0) invert(1); opacity: 50%;">
+                       
+                    </div>
+                </div>
+                <div class="lowerReelCard">
+                    <div class="playtReelBtn">Play</div>
+                    <div class="saveReelBtn">
+                        <img src="./Icons/share.png" width="20" alt="saved" style="filter: brightness(0) invert(1);">
+                    </div>
+                    <div class="shareReelBtn">
+                        <img src="./Icons/icons8-favorites-500.png" width="20" alt="saved" style="filter: brightness(0) invert(1);">
+                    </div>
+                </div>
+            </div>
+        
+       
+        </div>
+        <br>
+        <br>
+        <span class="BtnClass">
+            <button class="showLessBtn" id="showLessBtnId">Show less</button>    
+        </span>
+        <br>
+    </div>    
+    </div>
+    <script src="./Verson 2.0.js"></script>
+</body>
+</html>

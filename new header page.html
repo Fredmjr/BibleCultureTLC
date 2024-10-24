@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>headerpage</title>
+    <style>
+        body{
+            margin: 0px;
+        }
+        .headerBar{
+            width: 100%;
+            min-height: fit-content;
+            font-size: 13px;
+        }
+        #NavigationBar{
+            margin: 20px;
+            padding-right: 20px;
+            padding-left: 20px;
+            width: 94.5%;
+            height: 50px;
+            justify-content: space-between;
+           /*  box-shadow:  0 0 10px #0000001a; */
+            z-index: 1px;
+            position: fixed;
+            display: flex;
+            align-items: center;
+        }
+        .NaviBarStylel{
+            background-color: #003e55;
+            width: 30px;
+            height: 30px;
+            color: #ffffff;
+        }
+       #homePageSection{
+        /* background-color: #ffefcb; */
+        background-color: #f5e5c0;
+        width: 100%;
+        min-height: fit-content;
+        height: 700px;
+        z-index: 0px;
+       }
+
+       #linerBar{
+        background-color:  #003e55;
+        width: 25%;
+        height: 700px;
+        margin-right: auto;
+        margin-left: auto;
+        display: flex;
+        justify-content: center;
+       }
+       #floaterLogo{
+        margin-top: 8%;
+        border-bottom: 6px solid #faa111;
+        background-color: #faa11100;
+        position: absolute;
+        z-index: 1px;
+        width: 470px;
+        height: 470px;
+        border-radius: 50%;
+        box-shadow: 0 0 10px #00000019;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       }
+       #floaterHandles{
+        margin-top: 41%;
+        background-color: #faa111;
+        position: absolute;
+        z-index: 1px;
+        width: 470px;
+        height: 50px;
+        border-radius: 7px;
+        box-shadow: 0 0 10px #0000000c;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-left: 20px;
+        padding-right: 20px;
+       }
+
+       #logoHere{
+        margin-top: 20px;
+        display: flex; 
+        gap: 10px;
+        color: #ffefcb;
+       }
+
+       .NaviBarLeftStyle{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+
+       }
+       .NaviBarStyle{
+       height: 35px;
+       padding: 3px;
+       display: flex;
+        align-items: center;
+        justify-content: center;
+       }
+
+
+       .NaviBarStyle:hover{
+       /* background-color: #003e55;  */
+       
+        border-bottom: 2px solid #faa111;
+
+        transition: 0.4s ease-in-out;
+        color:  #003e55;
+        transform: scale(1.1);
+       }
+
+       .moreInfo{
+        display: flex;
+        gap: 40px;
+       }
+
+       #content{
+        background-color: #000000a4;
+        min-height: fit-content;
+       }
+
+       #footer{
+        background-color: #003e55;
+        width: 100%;
+        min-height: fit-content;
+       }
+       #FooterInfo{
+        padding: 50px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+       }
+       .enderInfo{
+        background-color: #055b7b00;
+        width: 350px;
+        height: 300px;
+       }
+
+       #sociaIcons{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+       }
+
+      /*  #dividerLine{
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+       } */
+
+       #dividerLine{
+        background-color: #ffffff7d;
+        margin-left: 50px;
+        margin-right: 50px;
+        height: 1.1px;
+       }
+       .footerSocialLinks{
+            background-color: line;
+            text-decoration: none; 
+            color: #ffffff; 
+            display: flex; 
+            align-items: center; 
+            width: 300px;
+            height: 30px;
+            border-top-left-radius: 16px;
+            border-bottom-left-radius: 16px;
+            padding-left: 5px;
+            padding-top: 2px;
+            padding-bottom: 2px;
+            gap: 7px;
+        }
+    </style>
+</head>
+<body>
+    <div class="headerBar">
+        <div id="NavigationBar">
+            <div>
+                <span class="NaviBarLeftStyle">
+                    <span class="NaviBarStyle">
+                        <img  src="./Trash & Extras/new inons/icons8-menu-100 (4).png" width="25" alt="">
+                    </span>
+                    <span class="NaviBarStyle">Location</span>
+                    <span class="NaviBarStyle">About us</span>
+                    <span class="NaviBarStyle">About us</span>
+                </span>
+            </div>
+
+            <div>
+                <span class="NaviBarLeftStyle">
+                    <span class="NaviBarStyle">Location</span>
+                    <span class="NaviBarStyle">About us</span>
+                    <span class="NaviBarStyle">About us</span>
+                    <span class="NaviBarStyle">
+                        <img src="./Trash & Extras/new inons/icons8-search-50.png" width="25" alt="">
+                    </span>
+                    <span class="NaviBarStyle">
+                        <img src="./Trash & Extras/new inons/icons8-user-100.png" width="30" alt="">
+                    </span>
+                    
+                </span>
+            </div>
+<!--             <span class="NaviBarStyle" id="logoHere"><img src="./Logos/mix v2.png" width="30" alt="">
+            <span>BibleCulture <br>
+                <span style="color: /* #ff320a */ #faa111">Learn &  Be Inspired</span>
+            </span>
+        </span> -->
+ 
+            
+        </div>
+        <div id="homePageSection">
+            <!-- i couldn't sett z-index, using P and span to make span to look like it is on top of P -->
+       <!--      <p id="linerBar">
+                <span id="floaterLogo"></span>
+                <p>df</p>
+            </p> -->                
+            <div id="linerBar">
+
+                <span class="NaviBarStyle" id="logoHere"><img src="./Logos/mix v2.png" width="30" alt="">
+                   <br>
+                   <br>
+                   <br>
+                    <span>BibleCulture <br>
+                        <span style="color: /* #ff320a */ #faa111">Learn &  Be Inspired</span>
+                    </span>
+                </span>
+            <div id="floaterLogo">
+                <img src="./Logos/mix v2.png" width="300" alt="">
+            </div>  
+            <div id="floaterHandles">
+                <a href="https://www.facebook.com/share/1E54TZ5cx3oE9F58/?mibextid=qi2Omg"><img src="./Icons/Facebook white.png" width="30" alt=""></a>
+                <a href=""><img src="./Icons/email white.png" width="30" alt=""></a>
+                <a href="https://www.instagram.com/fred_mjr37?igsh=OGQ5ZDc2ODk2ZA=="><img src="./Icons/instragram white.png" width="30" alt=""></a>
+                <a href=""><img src="./Icons/Whatsapp white.png" width="30" alt=""></a>
+                <a href="https://youtube.com/playlist?list=PLswh4Rt-GXgJsRDir76ddw47m_GHbJrgn&si=bEl9TTcClOrjmirS"><img src="./Icons/Youtube White Icon.png" width="30" alt=""></a>
+           
+            </div> 
+            </div>
+        </div>
+    </div>
+    <div id="content">
+        <br>
+        <br><br><br><br><br><br><br><br><br>
+        <div></div>
+        <br><br><br><br><br><br><br><br><br>
+    </div>
+    <div id="footer">
+        <span id="FooterInfo">
+            <div class="enderInfo"></div>
+            <div class="enderInfo"></div>
+            <div class="enderInfo">
+                <span>            
+                    <span></span>
+                    <span style="font-size: 13px; font-family: Montserrat-ExtraBold; font-size: 15px; color: #ffffff;">SOCIAL MEDIA HANDLES</span>
+                        <br>
+                        <br>
+                        <a href="https://www.instagram.com/fred_mjr37?igsh=OGQ5ZDc2ODk2ZA=="class="footerSocialLinks"><img src="./Icons/Youtube White Icon.png" width="25" alt="">Youtube: @BCTLC</a>
+                        <br>
+                        <a href="" class="footerSocialLinks"><img src="./Icons/Whatsapp white.png" width="25" alt="">WhatsApp: +260975986004/+260760932304</a>
+                        <br>
+                        <span style="font-size: 10px;">(social handles below will be avaliable soon)</span> 
+                        <br><br>
+                        <a href="https://www.facebook.com/share/1E54TZ5cx3oE9F58/?mibextid=qi2Omg" class="footerSocialLinks"><img src="./Icons/Facebook white.png" width="25" alt="">Facebook: @bctlcchannel</a>
+                        <br>
+                        <a href="https://www.instagram.com/fred_mjr37?igsh=OGQ5ZDc2ODk2ZA==" class="footerSocialLinks"><img src="./Icons/instragram white.png" width="25" alt="">Instagram: @bctlc_channel</a>
+                    <br>
+                    </span>
+            </div>
+        </span>
+        <div id="dividerLine">
+            <span id="line"></div>
+            </span>
+            <br>
+            <br>
+            <br>
+        <span id="sociaIcons">
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <a href="https://www.facebook.com/share/1E54TZ5cx3oE9F58/?mibextid=qi2Omg"><img src="./Icons/Facebook white.png" width="40" alt=""></a>
+            <a href=""><img src="./Icons/email white.png" width="40" alt=""></a>
+            <a href="https://www.instagram.com/fred_mjr37?igsh=OGQ5ZDc2ODk2ZA=="><img src="./Icons/instragram white.png" width="40" alt=""></a>
+            <a href=""><img src="./Icons/Whatsapp white.png" width="40" alt=""></a>
+            <a href="https://youtube.com/playlist?list=PLswh4Rt-GXgJsRDir76ddw47m_GHbJrgn&si=bEl9TTcClOrjmirS"><img src="./Icons/Youtube White Icon.png" width="40" alt=""></a>
+            <br>
+            <br>
+            <br>
+            <br>
+        </span>
+    </div>
+</body>
+</html>

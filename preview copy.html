@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Div Button Click</title>
+	<link rel="stylesheet" href="style.css">
+    <style>
+        body{
+            background-color: rgb(7, 7, 60);
+        }
+        #preview {
+	position: fixed;
+	top: 14%;
+	left: 9%;
+	width: 80%;
+	min-height: fit-content;
+	background-color: #fff;
+}
+
+.hidden {
+	display: none;
+    min-width: fit-content;
+	min-height: fit-content;
+    align-items: center;
+   position: relative;
+}
+.previewVid{
+    position: absolute;
+    top: 50%;
+    bottom: 25%;
+    left: 25%;
+            width: 950px;
+        	height: 520px;
+            display: grid;
+            align-items: center;
+            justify-content: center;
+            background-color: #9b5352;
+            border-radius: 3px;
+            padding: 10px;
+        }
+
+        .previewMenu{
+            position: absolute;
+    top: 50%;
+    bottom: 50%;
+            width: 300px;
+        	height: 540px;
+            display: grid;
+            vertical-align: middle;
+            background-color: #5c3231;
+            border-radius: 7px;
+            gap: 10px;
+        }
+        .console{
+            width: 850px;
+        	height: 47px;
+            background-color: #965352;
+            border-radius: 7px;
+        }
+        .previewMenuLogo{
+            width: 100%;
+        	height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            color: #ffffff;
+            background-color: #964645;
+            border-radius: 7px;
+            font-size: 17px;
+        }
+
+        .previewMenuInfo{
+            width: 100%;
+        	height: 470px;
+            display: grid;
+            justify-content: center;
+            background-color: #964645;
+            border-radius: 7px;
+        }
+        
+        .closeBtn{
+            border: 1px solid #ffffff00; 
+            border-radius: 3px; 
+            background-color: #f67472; 
+           width: 145px;
+            height: 40px; 
+            color: #ffffff;
+        }
+        .playBtn{
+            border: 1px solid #ffffff; 
+            border-radius: 3px; 
+            background-color: rgba(240, 248, 255, 0); 
+            width: 290px; 
+            height: 40px; 
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+	<button id="div-button">Click me</button>
+    <button id="close-preview">Close</button>
+	<div id="preview" class="hidden">
+        <div class="previewMenu">
+            <div class="previewMenuLogo">
+                <img src="./Logos/Bible Culture White Logo.png" width="40" alt="" style="filter: brightness(0) invert(1);">
+                   BibleCultureTLC
+            </div>
+            <div class="previewMenuInfo">
+                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                <button class="playBtn">Close</button>
+                
+            <!--<button class="playBtn">Close</button>
+                <button class="closeBtn">Play</button>-->
+            </div>
+        </div> 
+        <div class="previewVid">
+             <!--<video src="./videos/Do Well Part 4 - Mimicking Divinity.mp4"  width="940" height="510" controls></video>
+       <div class="console"></div>-->
+        </div>
+    </div>
+	<script src="./Verson 2.0.js"></script>
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .body{
+            margin: 0;
+            background-color: rgb(159, 95, 10);
+        }
+        .container{
+            background-color: rgb(104, 68, 20);
+        }
+        #preview {
+        	position: fixed;
+        	top: 10%;
+        	left: 10%;
+        	width: 84%;
+        	height: 72%;
+        	background-color:#351c1b;
+        	z-index: 1000;
+            border-radius: 3px;
+            display: flex;
+            align-items: center;
+            padding-left: 17px;
+            gap: 20px;
+        }
+
+        .hidden {
+        	display: none;
+        }
+        .previewVid{
+            width: 940px;
+        	height: 540px;
+            display: grid;
+            align-items: center;
+            justify-content: center;
+            background-color: #5c3231;
+            border-radius: 3px;
+        }
+
+        .previewMenu{
+            width: 300px;
+        	height: 540px;
+            display: grid;
+            vertical-align: middle;
+            background-color: #5c3231;
+            border-radius: 7px;
+            gap: 10px;
+        }
+        .console{
+            width: 850px;
+        	height: 47px;
+            background-color: #965352;
+            border-radius: 7px;
+        }
+        .previewMenuLogo{
+            width: 100%;
+        	height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            color: #ffffff;
+            background-color: #964645;
+            border-radius: 7px;
+            font-size: 17px;
+        }
+
+        .previewMenuInfo{
+            width: 100%;
+        	height: 470px;
+            display: grid;
+            justify-content: center;
+            background-color: #964645;
+            border-radius: 7px;
+        }
+        
+        .closeBtn{
+            border: 1px solid #ffffff00; 
+            border-radius: 3px; 
+            background-color: #f67472; 
+           width: 145px;
+            height: 40px; 
+            color: #ffffff;
+        }
+        .playBtn{
+            border: 1px solid #ffffff; 
+            border-radius: 3px; 
+            background-color: rgba(240, 248, 255, 0); 
+            width: 290px; 
+            height: 40px; 
+            color: #ffffff;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button id="div-button">Click me</button>
+        <div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>
+             Optio doloribus dolores natus ipsum necessitatibus. Nesciunt earum, inventore recusandae et illo voluptate modi excepturi <br>
+             suscipit nostrum perspiciatis iure, libero, veritatis quibusdam.
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br> <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br><button id="close-preview">Close</button>
+             <br>
+             <br>
+             
+        </div>
+        <div id="preview" class="hidden">
+            <div class="previewMenu">
+                <div class="previewMenuLogo">
+                    <img src="./Logos/Bible Culture White Logo.png" width="40" alt="" style="filter: brightness(0) invert(1);">
+                       BibleCultureTLC
+                </div>
+                <div class="previewMenuInfo">
+                    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                    <button class="playBtn">Close</button>
+                <!--<button class="playBtn">Close</button>
+                    <button class="closeBtn">Play</button>-->
+                </div>
+            </div> 
+            <div class="previewVid">
+                <video src="./videos/Do Well Part 4 - Mimicking Divinity.mp4" controls width="920"></video>
+            <!--<div class="console"></div>-->
+            </div>
+        </div>
+    </div>
+    <script src="./Verson 2.0.js"></script>
+</body>
+</html>

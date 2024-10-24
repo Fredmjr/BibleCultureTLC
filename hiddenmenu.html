@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Navigation Menu Styles */
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav li {
+  position: relative;
+}
+
+/* Drop-down Menu Styles */
+nav ul ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0; /* Changed from left: 0 to right: 0 */
+  background-color: #f9f9f9;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+
+
+nav ul li:hover > ul {
+  display: block;
+}
+
+.linkStyle{
+    text-decoration: none;
+  color: #000000;
+  padding: 10px;
+  display: block;
+}
+
+    </style>
+</head>
+<body>
+   
+</body>
+</html>
